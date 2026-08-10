@@ -7,6 +7,7 @@ import { CampusLife } from "@/components/CampusLife";
 import { News } from "@/components/News";
 import { Admissions } from "@/components/Admissions";
 import { Footer } from "@/components/Footer";
+import { FounderQuote } from "@/components/FounderQuote";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <StatsBar />
+      <FounderQuote/>
       <About />
       <Programs />
       <CampusLife />

@@ -20,10 +20,10 @@ export function CampusLife() {
   ];
 
   const highlights = [
-    { icon: "🕌", label: "Sholat Berjamaah", desc: "Sholat lima waktu berjamaah di masjid pusat kampus." },
-    { icon: "📚", label: "Halaqah Ilmu", desc: "Lingkar kajian kecil bersama ulama senior setiap malam." },
-    { icon: "🌿", label: "Taman Kampus", desc: "Taman yang asri untuk tafakur dan pembelajaran informal." },
-    { icon: "🎓", label: "Organisasi Santri", desc: "Debat, jurnalistik, kaligrafi, dan kegiatan pengabdian masyarakat." },
+    { icon: "", label: "Sholat Berjamaah", desc: "Sholat lima waktu berjamaah di masjid pusat kampus." },
+    { icon: "", label: "Halaqah Ilmu", desc: "Lingkar kajian kecil bersama ulama senior setiap malam." },
+    { icon: "", label: "Taman Kampus", desc: "Taman yang asri untuk tafakur dan pembelajaran informal." },
+    { icon: "", label: "Organisasi Santri", desc: "Debat, jurnalistik, kaligrafi, dan kegiatan pengabdian masyarakat." },
   ];
 
   return (

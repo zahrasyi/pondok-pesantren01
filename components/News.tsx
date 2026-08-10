@@ -6,30 +6,29 @@ const news = [
     category: "Akademik",
     date: "5 Juni 2026",
     title: "Musabaqah Hifzil Qur'an Tahunan Diikuti 400 Peserta dari Seluruh Nusantara",
-    excerpt: "Kompetisi Tilawatil Qur'an Nasional 2026 yang diselenggarakan Ma'had Al-Noor menyambut santri dari 28 provinsi.",
-    img: "https://images.unsplash.com/photo-1540567736792-f78f6242e4e0?w=600&h=380&fit=crop&auto=format",
-    featured: true,
+    excerpt: "Kompetisi Tilawatil Qur'an Nasional 2026 yang diselenggarakan Ma'had Daarul Huda menyambut santri dari 28 provinsi.",
+    img: "https://images.unsplash.com/photo-1540567736792-f78f6242e4e0?w=800&h=600&fit=crop&auto=format",
   },
   {
     category: "Penelitian",
     date: "28 Mei 2026",
-    title: "Makalah Dosen tentang Bioetika Islam Diterbitkan di Jurnal Internasional Terkemuka",
+    title: "Makalah Dosen tentang Bioetika Islam Diterbitkan di Jurnal Internasional",
     excerpt: "Penelitian Dr. Fatimah Zahra yang inovatif mendapat pengakuan dari Oxford Journal of Islamic Studies.",
-    img: null,
+    img: "https://images.unsplash.com/photo-1571193161738-deaba9b6cc26?w=800&h=600&fit=crop&auto=format",
   },
   {
     category: "Penerimaan",
     date: "20 Mei 2026",
     title: "Penerimaan 2026: Pendaftaran Dibuka untuk Semua Program Sarjana",
     excerpt: "Calon santri dapat mengajukan pendaftaran melalui portal daring. Batas waktu: 15 Agustus.",
-    img: null,
+    img: "https://images.unsplash.com/photo-1514369118554-e20d93546b30?w=800&h=600&fit=crop&auto=format",
   },
   {
     category: "Kampus",
     date: "12 Mei 2026",
     title: "Sayap Perpustakaan Baru & Pusat Sumber Digital Resmi Dibuka",
     excerpt: "Perpustakaan Digital Baitul Hikmah menyediakan akses ke lebih dari 120.000 teks Islam klasik dan kontemporer.",
-    img: null,
+    img: "https://images.unsplash.com/photo-1741699428220-65f37f3fbbcb?w=800&h=600&fit=crop&auto=format",
   },
 ];
 
@@ -37,7 +36,7 @@ export function News() {
   return (
     <section id="news" className="bg-[#F8F6F1] py-32 px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+        {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-5">
@@ -59,58 +58,45 @@ export function News() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-px bg-[rgba(30,58,30,0.1)]">
-          {/* Featured story */}
-          <div className="lg:col-span-3 relative overflow-hidden group cursor-pointer bg-white">
-            <div className="relative overflow-hidden" style={{ height: "320px" }}>
+        {/* Grid Kartu Interaktif (2x2) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {news.map((item, i) => (
+            <Link key={i} href="#" className="relative block h-[380px] overflow-hidden group bg-[#1A2410]">
+              {/* Gambar Background dengan efek Scale saat Hover */}
               <img
-                src={news[0].img!}
-                alt={news[0].title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                src={item.img}
+                alt={item.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
               />
-              <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(26,36,16,0.8) 0%, transparent 60%)" }} />
-              <div className="absolute bottom-0 left-0 p-8">
-                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "9px", fontWeight: 500, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1A2410", background: "#B8960C", padding: "4px 10px" }}>
-                  {news[0].category}
+              
+              {/* Gradient Gelap dari Bawah agar teks selalu terbaca */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1A2410] via-[#1A2410]/50 to-transparent transition-opacity duration-500 opacity-90 group-hover:opacity-100" />
+              
+              {/* Kontainer Teks */}
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                {/* Badge Kategori */}
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "9px", fontWeight: 500, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1A2410", background: "#B8960C", padding: "4px 10px", width: "fit-content", marginBottom: "12px" }}>
+                  {item.category}
                 </span>
-              </div>
-            </div>
-            <div className="p-8">
-              <div className="mb-3" style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", color: "#6B7355", letterSpacing: "0.05em" }}>
-                {news[0].date}
-              </div>
-              <h3 className="mb-3" style={{ fontFamily: "'Playfair Display', serif", fontSize: "22px", fontWeight: 500, color: "#1A2410", lineHeight: 1.35 }}>
-                {news[0].title}
-              </h3>
-              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 300, color: "#6B7355", lineHeight: 1.75 }}>
-                {news[0].excerpt}
-              </p>
-            </div>
-          </div>
-
-          {/* Side stories */}
-          <div className="lg:col-span-2 flex flex-col">
-            {news.slice(1).map((item, i) => (
-              <div
-                key={i}
-                className="flex-1 p-7 bg-white cursor-pointer group border-b border-[rgba(30,58,30,0.1)] last:border-b-0 hover:bg-[#EDE8DC] transition-colors duration-300"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "9px", fontWeight: 500, letterSpacing: "0.15em", textTransform: "uppercase", color: "#B8960C" }}>
-                    {item.category}
-                  </span>
-                  <span style={{ fontSize: "9px", color: "#6B7355" }}>·</span>
-                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", color: "#6B7355" }}>{item.date}</span>
+                
+                <div className="mb-2" style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", color: "rgba(248,246,241,0.7)", letterSpacing: "0.05em" }}>
+                  {item.date}
                 </div>
-                <h4 className="mb-2 group-hover:text-[#1E3A1E] transition-colors" style={{ fontFamily: "'Playfair Display', serif", fontSize: "16px", fontWeight: 500, color: "#1A2410", lineHeight: 1.4 }}>
+                
+                {/* Judul Berita */}
+                <h3 className="mb-3 transition-colors duration-300 group-hover:text-[#B8960C]" style={{ fontFamily: "'Playfair Display', serif", fontSize: "22px", fontWeight: 500, color: "#F8F6F1", lineHeight: 1.35 }}>
                   {item.title}
-                </h4>
-                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 300, color: "#6B7355", lineHeight: 1.7 }}>
-                  {item.excerpt}
-                </p>
+                </h3>
+                
+                {/* Deskripsi Singkat (Awalnya tersembunyi, muncul perlahan saat di-hover) */}
+                <div className="overflow-hidden transition-all duration-500 max-h-0 opacity-0 group-hover:max-h-[100px] group-hover:opacity-100 mt-2">
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 300, color: "rgba(248,246,241,0.8)", lineHeight: 1.6 }}>
+                    {item.excerpt}
+                  </p>
+                </div>
               </div>
-            ))}
-          </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

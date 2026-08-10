@@ -15,7 +15,7 @@ export function About() {
           <div className="relative">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1711567695332-f72b41609182?w=700&h=500&fit=crop&auto=format"
+                src="/about/babussalam.jpg"
                 alt="Kubah kampus Ma'had Al-Noor"
                 className="w-full object-cover"
                 style={{ height: "420px" }}
@@ -55,10 +55,10 @@ export function About() {
             </div>
 
             <p className="mb-6" style={{ fontFamily: "'Inter', sans-serif", fontSize: "14px", fontWeight: 300, color: "rgba(248,246,241,0.75)", lineHeight: 1.85 }}>
-              Didirikan pada tahun 1989 oleh Ustadz Dr. Abdullah Al-Hakim, Ma'had Al-Noor hadir dengan satu visi: melahirkan lulusan yang kokoh dalam keilmuan Islam klasik sekaligus siap memimpin di era modern.
+            Pondok Pesantren Daarul Huda Li Tahfidhil Qur'an didirikan di Gondanglegi, Malang, berawal dari keterbatasan ekonomi dan infrastruktur. Didirikan berlandaskan keikhlasan dan keteguhan hati pengasuhnya, pesantren ini berkembang dari sebuah rintisan kecil menjadi institusi pendidikan yang diakui luas.
             </p>
             <p className="mb-10" style={{ fontFamily: "'Inter', sans-serif", fontSize: "14px", fontWeight: 300, color: "rgba(248,246,241,0.6)", lineHeight: 1.85 }}>
-              Kurikulum terpadu kami berpijak pada tradisi madrasah yang agung sambil terlibat kritis dengan pengetahuan kontemporer, memastikan para santri siap mengabdi kepada umat dengan hikmah dan relevansi.
+            Pesantren ini memiliki ekosistem yang unik dengan memadukan metode salaf (klasik) dan modernitas, mencetak generasi penghafal Al-Qur'an yang tangguh, berwawasan global, sekaligus ahli dalam literatur Islam klasik.
             </p>
 
             {/* Values grid */}

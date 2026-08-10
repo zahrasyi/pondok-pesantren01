@@ -1,20 +1,20 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link"; // Diubah dari react-router
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const slides = [
   {
-    img: "https://images.unsplash.com/photo-1717246070626-b236a59ef2cc?w=1800&h=1000&fit=crop&auto=format",
+    img: "/hero/rihlah.png",
     caption: "Kampus & Masjid",
   },
   {
-    img: "https://images.unsplash.com/photo-1555300873-660313ab1518?w=1800&h=1000&fit=crop&auto=format",
+    img: "/hero/amaliyah.png",
     caption: "Ruang Belajar Klasik",
   },
   {
-    img: "https://images.unsplash.com/photo-1776982298226-496bb56db7a3?w=1800&h=1000&fit=crop&auto=format",
+    img: "/hero/wisudatahfidz.png",
     caption: "Taman Kampus yang Damai",
   },
 ];
@@ -51,22 +51,16 @@ export function Hero() {
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(26,36,16,0.5) 0%, transparent 50%)" }} />
       </div>
 
-      {/* Arabic geometric watermark */}
-      <div
-        className="absolute right-0 top-1/2 -translate-y-1/2 opacity-[0.04] select-none pointer-events-none"
-        style={{ fontFamily: "'Amiri', serif", fontSize: "32vw", color: "#F8F6F1", lineHeight: 1 }}
-      >
-        ن
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-20 max-w-7xl mx-auto">
-        {/* Eyebrow */}
-        <div className="flex items-center gap-3 mb-8">
+      {/* Content - Ditambahkan items-center dan text-center */}
+      <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-8 md:px-20 max-w-7xl mx-auto">
+        
+        {/* Eyebrow - Ditambahkan justify-center */}
+        <div className="flex items-center justify-center gap-3 mb-8">
           <div className="w-8 h-px bg-[#B8960C]" />
           <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 400, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8960C" }}>
             Berdiri 1989 · Bogor, Indonesia
           </span>
+          <div className="w-8 h-px bg-[#B8960C]" /> {/* Tambahan garis di kanan agar simetris saat di tengah */}
         </div>
 
         {/* Headline */}
@@ -75,20 +69,20 @@ export function Hero() {
           <em>Wisdom</em> 
         </h1>
 
-        {/* Arabic subtitle */}
-        <div className="mb-6" style={{ fontFamily: "'Amiri', serif", fontSize: "22px", color: "rgba(248,246,241,0.6)", letterSpacing: "0.05em", direction: "rtl", maxWidth: "320px" }}>
+        {/* Arabic subtitle - Ditambahkan textAlign: center */}
+        <div className="mb-6" style={{ fontFamily: "'Amiri', serif", fontSize: "22px", color: "rgba(248,246,241,0.6)", letterSpacing: "0.05em", direction: "rtl", maxWidth: "320px", textAlign: "center" }}>
           العلم نور والجهل ظلام
         </div>
 
         {/* Body */}
-        <p className="max-w-sm mb-10" style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px", fontWeight: 300, color: "rgba(248,246,241,0.75)", lineHeight: 1.75 }}>
+        <p className="max-w-2xl mb-10" style={{ fontFamily: "'Inter', sans-serif", fontSize: "20px", fontWeight: 300, color: "rgba(248,246,241,0.75)", lineHeight: 1.75 }}>
           Pendidikan Islam holistik yang memadukan keilmuan klasik dengan pengetahuan kontemporer, membentuk ulama dan pemimpin untuk dunia modern.
         </p>
 
-        {/* CTAs */}
-        <div className="flex flex-wrap gap-4 items-center">
+        {/* CTAs - Ditambahkan justify-center */}
+        <div className="flex flex-wrap justify-center gap-4 items-center">
           <Link
-            href="/penerimaan" // Diubah menjadi href
+            href="/penerimaan"
             className="flex items-center gap-2 group"
             style={{
               fontFamily: "'Inter', sans-serif",
@@ -107,7 +101,7 @@ export function Hero() {
             <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
           </Link>
           <Link
-            href="/program" // Diubah menjadi href
+            href="/program"
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "12px",
@@ -126,8 +120,8 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Slide dots */}
-      <div className="absolute bottom-10 left-8 md:left-20 flex gap-2 z-10">
+      {/* Slide dots - Diubah posisinya ke tengah bawah */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {slides.map((_, i) => (
           <button
             key={i}

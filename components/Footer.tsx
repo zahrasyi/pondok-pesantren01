@@ -9,11 +9,13 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-9 h-9 rounded-full border border-[rgba(184,150,12,0.5)] flex items-center justify-center">
-                <span style={{ fontFamily: "'Amiri', serif", fontSize: "14px", color: "#B8960C" }}>م</span>
-              </div>
+              <img 
+                src="/logo1.png" 
+                alt="Logo Ma'had" 
+                className="w-16 h-16 object-contain" 
+              />
               <div>
-                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "14px", fontWeight: 600, color: "#F8F6F1" }}>Ma'had Al-Noor</div>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "14px", fontWeight: 600, color: "#F8F6F1" }}>PONDOK PESANTREN DAARUL HUDA</div>
                 <div style={{ fontFamily: "'Inter', sans-serif", fontSize: "9px", fontWeight: 400, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(248,246,241,0.4)" }}>Pesantren Islam</div>
               </div>
             </div>
