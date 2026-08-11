@@ -7,28 +7,42 @@ const news = [
     date: "5 Juni 2026",
     title: "Musabaqah Hifzil Qur'an Tahunan Diikuti 400 Peserta dari Seluruh Nusantara",
     excerpt: "Kompetisi Tilawatil Qur'an Nasional 2026 yang diselenggarakan Ma'had Daarul Huda menyambut santri dari 28 provinsi.",
-    img: "https://images.unsplash.com/photo-1540567736792-f78f6242e4e0?w=800&h=600&fit=crop&auto=format",
+    img: "/news/kemah.png",
   },
   {
     category: "Penelitian",
     date: "28 Mei 2026",
     title: "Makalah Dosen tentang Bioetika Islam Diterbitkan di Jurnal Internasional",
     excerpt: "Penelitian Dr. Fatimah Zahra yang inovatif mendapat pengakuan dari Oxford Journal of Islamic Studies.",
-    img: "https://images.unsplash.com/photo-1571193161738-deaba9b6cc26?w=800&h=600&fit=crop&auto=format",
+    img: "/news/kemahh.png",
   },
   {
     category: "Penerimaan",
     date: "20 Mei 2026",
     title: "Penerimaan 2026: Pendaftaran Dibuka untuk Semua Program Sarjana",
     excerpt: "Calon santri dapat mengajukan pendaftaran melalui portal daring. Batas waktu: 15 Agustus.",
-    img: "https://images.unsplash.com/photo-1514369118554-e20d93546b30?w=800&h=600&fit=crop&auto=format",
+    img: "/news/rihlah.png",
   },
   {
     category: "Kampus",
     date: "12 Mei 2026",
     title: "Sayap Perpustakaan Baru & Pusat Sumber Digital Resmi Dibuka",
     excerpt: "Perpustakaan Digital Baitul Hikmah menyediakan akses ke lebih dari 120.000 teks Islam klasik dan kontemporer.",
-    img: "https://images.unsplash.com/photo-1741699428220-65f37f3fbbcb?w=800&h=600&fit=crop&auto=format",
+    img: "/news/ujian lisan.png",
+  },
+  {
+    category: "Kampus",
+    date: "12 Mei 2026",
+    title: "Sayap Perpustakaan Baru & Pusat Sumber Digital Resmi Dibuka",
+    excerpt: "Perpustakaan Digital Baitul Hikmah menyediakan akses ke lebih dari 120.000 teks Islam klasik dan kontemporer.",
+    img: "/news/upacara.png",
+  },
+  {
+    category: "Kampus",
+    date: "12 Mei 2026",
+    title: "Sayap Perpustakaan Baru & Pusat Sumber Digital Resmi Dibuka",
+    excerpt: "Perpustakaan Digital Baitul Hikmah menyediakan akses ke lebih dari 120.000 teks Islam klasik dan kontemporer.",
+    img: "/news/wisudatah.png",
   },
 ];
 
@@ -36,30 +50,16 @@ export function News() {
   return (
     <section id="news" className="bg-[#F8F6F1] py-32 px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-          <div>
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-8 h-px bg-[#B8960C]" />
-              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 400, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8960C" }}>
-                Berita Terkini
-              </span>
-            </div>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 3.5vw, 46px)", fontWeight: 500, color: "#1A2410", lineHeight: 1.2 }}>
-              Berita & <em>Pengumuman</em>
-            </h2>
-          </div>
-          <Link
-            href="#"
-            className="flex items-center gap-2 group hover:opacity-60 transition-opacity"
-            style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1E3A1E", textDecoration: "none", borderBottom: "1px solid #1E3A1E", paddingBottom: "2px", whiteSpace: "nowrap" }}
-          >
-            Semua Berita <ArrowRight size={12} />
-          </Link>
+        
+        {/* Header Section (Lebih Bersih Tanpa Link di Kanan) */}
+        <div className="mb-14">
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 3.5vw, 46px)", fontWeight: 500, color: "#1A2410", lineHeight: 1.2 }}>
+            Berita & <em>Pengumuman</em>
+          </h2>
         </div>
 
-        {/* Grid Kartu Interaktif (2x2) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Grid Kartu Interaktif (3 Kolom) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {news.map((item, i) => (
             <Link key={i} href="#" className="relative block h-[380px] overflow-hidden group bg-[#1A2410]">
               {/* Gambar Background dengan efek Scale saat Hover */}
@@ -98,6 +98,30 @@ export function News() {
             </Link>
           ))}
         </div>
+
+        {/* Tombol Semua Berita (Dipindah ke Bawah Tengah) */}
+        <div className="flex justify-center mt-14">
+          <Link
+            href="/berita"
+            className="flex items-center gap-2 group hover:opacity-70 transition-opacity"
+            style={{ 
+              fontFamily: "'Inter', sans-serif", 
+              fontSize: "12px", 
+              fontWeight: 500, 
+              letterSpacing: "0.12em", 
+              textTransform: "uppercase", 
+              color: "#1E3A1E", 
+              textDecoration: "none", 
+              borderBottom: "1px solid #1E3A1E", 
+              paddingBottom: "4px" 
+            }}
+          >
+            Semua Berita 
+            {/* Panah ini akan bergeser sedikit ke kanan saat di-hover */}
+            <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+        </div>
+
       </div>
     </section>
   );

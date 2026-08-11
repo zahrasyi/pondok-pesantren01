@@ -60,6 +60,15 @@ const allBerita = [
     img: "https://images.unsplash.com/photo-1623314556929-69d34cb19010?w=700&h=460&fit=crop&auto=format",
     featured: false,
   },
+  {
+    id: 7,
+    category: "Akademik",
+    date: "25 April 2026",
+    title: "Seminar Internasional Fiqh Kontemporer Hadirkan Ulama dari 12 Negara",
+    excerpt: "Ma'had An-Noor sukses menyelenggarakan seminar internasional dengan peserta dari Malaysia, Mesir, Arab Saudi, dan lainnya.",
+    img: "https://images.unsplash.com/photo-1623314556929-69d34cb19010?w=700&h=460&fit=crop&auto=format",
+    featured: false,
+  },
 ];
 
 const categories = ["Semua", "Akademik", "Penelitian", "Penerimaan", "Kampus", "Prestasi"];
@@ -79,9 +88,7 @@ export default function BeritaPage() {
       <PageBanner
         eyebrow="Berita & Pengumuman"
         title="Kabar Terkini"
-        titleItalic="dari Kampus"
-        arabic="اقْرَأْ بِاسْمِ رَبِّكَ"
-        desc="Ikuti perkembangan terbaru dari Ma'had An-Noor — kegiatan akademik, prestasi santri, dan pengumuman resmi."
+        desc="Ikuti perkembangan terbaru dari Daarul Huda — kegiatan akademik, prestasi santri, dan pengumuman resmi."
         img="https://images.unsplash.com/photo-1663572092918-e31425e93121?w=1600&h=900&fit=crop&auto=format"
       />
 

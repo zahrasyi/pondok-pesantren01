@@ -9,7 +9,7 @@ const navItems = [
   { label: "Tentang", href: "/tentang" },
   { label: "Program", href: "/program" },
   { label: "Penerimaan", href: "/penerimaan" },
-  { label: "Kehidupan Kampus", href: "/kehidupan-kampus" },
+  { label: "Kegiatan", href: "/kehidupan-kampus" },
   { label: "Berita", href: "/berita" },
 ];
 
@@ -30,6 +30,9 @@ export function Navbar() {
             className="w-16 h-16 md:w-16 md:h-16 object-contain" 
           />
           <div className="leading-tight">
+            <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "10px", fontWeight: 600, color: "#1A2410", letterSpacing: "0.01em" }}>
+              PONDOK PESANTREN 
+            </div>
             <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "15px", fontWeight: 600, color: "#1A2410", letterSpacing: "0.01em" }}>
               DAARUL HUDA
             </div>

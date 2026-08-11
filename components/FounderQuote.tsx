@@ -8,7 +8,7 @@ export function FounderQuote() {
           {/* Efek lengkungan dihapus, diganti dengan shadow tipis agar foto lebih hidup */}
             <div className="relative w-full max-w-[360px] aspect-[4/5] overflow-hidden shadow-md">
                 <img
-                src="/pendiri.png"
+                src="/quote/pendiri.png"
                 alt="pendiri"
                 className="w-full h-full object-cover"
                 />

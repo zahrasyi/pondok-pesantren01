@@ -3,24 +3,23 @@ import { PageBanner } from "@/components/PageBanner";
 import { Footer } from "@/components/Footer";
 
 const values = [
-  { ar: "عِلْم", id: "Ilmu", desc: "Menuntut ilmu adalah kewajiban setiap Muslim. Kami menjadikan penguasaan ilmu sebagai fondasi seluruh kegiatan akademik." },
-  { ar: "أَدَب", id: "Akhlak", desc: "Ilmu tanpa akhlak adalah bahaya. Pembentukan karakter mulia menjadi prioritas utama dalam setiap aspek kehidupan pesantren." },
-  { ar: "خِدْمَة", id: "Pengabdian", desc: "Lulusan kami disiapkan untuk mengabdi kepada umat dan masyarakat, membawa manfaat nyata bagi lingkungan sekitarnya." },
+  { ar: "القرآن", id: "spiritual & Tahfidz", desc: "Menjadikan Al-Qur'an sebagai episentrum pendidikan. Menghafal Al-Qur'an bukan sekadar menjaga lisan, tetapi menata hati dan karakter untuk menjadi Hamilul Qur'an (Penjaga Al-Qur'an) yang berakhlak mulia." },
+  { ar: "التفقه في الدين", id: "Tradisi Salaf & Kitab Kuning", desc: "Mempertahankan tradisi literasi Islam klasik. Melalui Madrasah Diniyah (Wustho & Ulya), santri dibekali nalar fiqih, akidah, dan kemampuan analisis hukum Islam berdasarkan literatur ulama salafus shalih." },
+  { ar: "اللغة والانضباط", id: "Wawasan Global & Modernitas", desc: "Kedisiplinan waktu yang dinamis serta kewajiban berbahasa Arab dan Inggris (Sintesa Gontor). Membentuk mental pejuang dan kemampuan komunikasi internasional agar santri memiliki daya saing global." },
 ];
 
 const milestones = [
-  { year: "1989", event: "Ma'had An-Noor didirikan oleh Ustadz Dr. Abdullah Al-Hakim di Bogor, Jawa Barat." },
-  { year: "1995", event: "Program sarjana pertama resmi terakreditasi oleh Kementerian Agama RI." },
-  { year: "2003", event: "Pembangunan Masjid Jami' An-Noor sebagai pusat spiritual kampus." },
-  { year: "2010", event: "Peluncuran program pascasarjana dan pusat penelitian Islam kontemporer." },
-  { year: "2018", event: "Ma'had An-Noor meraih akreditasi A dari BAN-PT untuk seluruh program studi." },
-  { year: "2024", event: "Pembukaan Baitul Hikmah Digital Library dengan koleksi lebih dari 120.000 referensi." },
+  { year: "1969", event: "Pondok Pesantren Daarul Huda resmi didirikan di Gondanglegi, Malang oleh K.H. Hasan Bashori Yasin dengan keterbatasan sarana namun visi yang besar." },
+  { year: "Fase Regenerasi", event: "Estafet kepemimpinan dilanjutkan oleh Hj. Lilik Chaidaroh dan K.H. Abdul Munif Ma'sum. Dimulailah integrasi sistem pendidikan modern dan formal dengan penguatan Madrasah Ibtidaiyah (MI) dan Sekolah Menengah Pertama Islam (SMPI)." },
+  { year: "2016", event: "Berdirinya Madrasah Aliyah (MA) Daarul Huda, menjadi kawah candradimuka bagi santri untuk mempersiapkan diri ke perguruan tinggi dengan ijazah formal dan kompetensi hafidz." },
+  { year: "Masa Kini", event: "Ekspansi masif menjadi tiga lokasi terpadu: Daarul Huda 1 (Pusat Sejarah & Salafiyah), Daarul Huda 2 (Pusat Pendidikan Menengah Modern), dan Daarul Huda 3 / Baitut Tahfidh (Pusat Unggulan Tahfidz masa depan)." },
+  { year: "Masa Depan", event: "Proyeksi pembangunan Perguruan Tinggi Daarul Huda sebagai pusat keunggulan untuk melahirkan sarjana muslim yang ahli di bidang sains/sosial sekaligus memiliki sanad keilmuan klasik." },
 ];
 
 const pimpinan = [
-  { name: "Prof. Dr. Abdullah Al-Hakim", role: "Pendiri & Pengasuh Utama", img: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=300&h=300&fit=crop&auto=format" },
-  { name: "Dr. H. Ahmad Fauzi, M.A.", role: "Direktur Akademik", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&auto=format" },
-  { name: "Ustadzah Dr. Maryam Sholihah", role: "Direktur Kemahasiswaan", img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=300&h=300&fit=crop&auto=format" },
+  { name: "K.H. Hasan Bashori Yasin ", role: "Pendiri (Muassis)", img: "/quote/pendiri.png" },
+  { name: "Hj. Lilik Chaidaroh", role: "Pengasuh & Pakar Kurikulum Kitab Kuning (Salafiyah)", img: "/admisss.png" },
+  { name: "K.H. Abdul Munif Ma'sum", role: "Pengasuh & Pimpinan Sinergi Pendidikan Modern", img: "/admisss.png" },
 ];
 
 export default function TentangPage() {
@@ -29,11 +28,10 @@ export default function TentangPage() {
       <Navbar />
       <PageBanner
         eyebrow="Tentang Lembaga"
-        title="Warisan Cahaya"
-        titleItalic="dan Ilmu"
-        arabic="طلب العلم فريضة على كل مسلم"
-        desc="Selama lebih dari tiga dasawarsa, Ma'had An-Noor telah menjadi mercusuar keilmuan Islam yang memadukan tradisi klasik dengan visi masa depan."
-        img="https://images.unsplash.com/photo-1711567695332-f72b41609182?w=1600&h=900&fit=crop&auto=format"
+        title="Mufaqqih Fiddin"
+        titleItalic="dan Berwawasan Global"
+        desc="Selama lebih dari lima dekade, Pondok Pesantren Daarul Huda Li Tahfidhil Qur'an telah menjadi saksi bisu bagaimana keikhlasan dan keteguhan hati mampu mengubah keterbatasan menjadi mercusuar pendidikan Islam yang progresif di Kabupaten Malang."
+        img="/hero/wisudatahfidz.png"
       />
 
       {/* Sejarah & Visi */}
@@ -45,13 +43,13 @@ export default function TentangPage() {
               <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 400, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8960C" }}>Sejarah</span>
             </div>
             <h2 className="mb-6" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(26px, 3vw, 40px)", fontWeight: 500, color: "#1A2410", lineHeight: 1.2 }}>
-              Perjalanan <em>Panjang</em>
+              Perjalanan <em>Panjang</em> 
             </h2>
             <p className="mb-4" style={{ fontFamily: "'Inter', sans-serif", fontSize: "14px", fontWeight: 300, color: "#6B7355", lineHeight: 1.85 }}>
-              Didirikan pada tahun 1989 oleh Ustadz Dr. Abdullah Al-Hakim, Ma'had An-Noor lahir dari kerinduan mendalam terhadap pendidikan Islam yang komprehensif — yang mampu menjawab tantangan zaman tanpa meninggalkan akar keilmuan klasik.
+            Didirikan pada tahun 1969 oleh K.H. Hasan Bashori Yasin, Pondok Pesantren Daarul Huda berawal dari sebuah rintisan kecil di Gondanglegi, Malang, di tengah berbagai keterbatasan sarana dan infrastruktur. Dengan semangat pengabdian dan prinsip "modernitas tanpa meninggalkan tradisi", pesantren ini perlahan tumbuh.
             </p>
             <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "14px", fontWeight: 300, color: "#6B7355", lineHeight: 1.85 }}>
-              Berawal dari sebuah surau kecil dengan dua belas santri perdana, kini Ma'had An-Noor telah berkembang menjadi institusi pendidikan Islam terkemuka dengan lebih dari 2.400 santri aktif dari seluruh penjuru nusantara.
+            Berkat ketulusan niat (Ikhlas) sang pendiri dan diteruskan oleh generasi penerusnya, Hj. Lilik Chaidaroh dan K.H. Abdul Munif Ma'sum, pesantren ini kini telah bertransformasi. Dari yang awalnya berfokus pada penguatan bahasa dan kedisiplinan ala Gontor, kini Daarul Huda menjadi institusi berskala besar dengan tiga lokasi pengembangan yang berdedikasi mencetak Hufadzhul Qur'an (penghafal Al-Qur'an 30 juz) yang ahli dalam kitab kuning sekaligus menguasai pendidikan formal berstandar nasional.
             </p>
           </div>
           <div>
@@ -85,7 +83,7 @@ export default function TentangPage() {
               Tiga Pilar <em>Utama</em>
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[rgba(248,246,241,0.08)]">
+          <div className="grid grid-cols-1 items-center text-center md:grid-cols-3 gap-px bg-[rgba(248,246,241,0.08)]">
             {values.map((v) => (
               <div key={v.id} className="p-10" style={{ background: "rgba(26,36,16,0.4)" }}>
                 <div className="mb-4" style={{ fontFamily: "'Amiri', serif", fontSize: "48px", color: "#B8960C" }}>{v.ar}</div>
@@ -117,7 +115,7 @@ export default function TentangPage() {
       </section>
 
       {/* Pimpinan */}
-      <section className="bg-[#EDE8DC] py-24 px-8">
+      <section className="bg-[#F8F6F1] py-24 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-8 h-px bg-[#B8960C]" />
