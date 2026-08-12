@@ -17,13 +17,23 @@ export function Footer() {
         {/* Kolom Kiri: Logo & Info Kontak */}
         <div className="flex flex-col gap-6">
           
-          {/* Logo Bergaya Kotak Klasik */}
-          <div className="bg-[#1E3A1E] text-[#F8F6F1] px-5 py-4 inline-block w-fit">
-            <div style={{ fontFamily: "'Inter', sans-serif", fontSize: "9px", fontWeight: 400, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "2px" }}>
-              Pondok Pesantren
-            </div>
-            <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "28px", fontWeight: 700, lineHeight: 1, letterSpacing: "0.02em" }}>
-              DAARUL HUDA
+          {/* Logo Pondok & Kotak Hijau */}
+          <div className="flex items-center gap-4">
+            {/* Lambang / Logo Pondok */}
+            <img 
+              src="/logo1.png" 
+              alt="Lambang Pondok Pesantren" 
+              className="w-16 h-16 object-contain" 
+            />
+
+            {/* Kotak Hijau Tulisan Daarul Huda */}
+            <div className=" text-[#F8F6F1] py- inline-block">
+              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "15px", fontWeight: 600, color: "#1A2410", letterSpacing: "0.01em" }}>
+                PONDOK PESANTREN DAARUL HUDA
+              </div>
+              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "11px", fontWeight: 600, color: "#1A2410", letterSpacing: "0.01em" }}>
+                LI TAHFIDZIL QUR'AN
+              </div>
             </div>
           </div>
 

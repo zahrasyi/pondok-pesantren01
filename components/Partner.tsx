@@ -33,7 +33,7 @@ export function Partners() {
   return (
     <section className="bg-[#f1eee9] py-16 overflow-hidden border-t border-[rgba(30,58,30,0.05)]">
       <div className="max-w-7xl mx-auto px-8 mb-10 text-center">
-        <h3 style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8960C" }}>
+        <h3 style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8960C" }}>
           Menjalin Ukhuwah & Sinergi Bersama
         </h3>
       </div>

@@ -13,7 +13,7 @@ export function StatsBar() {
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(26px, 3vw, 40px)", fontWeight: 500, color: "#1A2410" }}>
               Membangun <em>Generasi</em>, Menebar Manfaat
             </h2>
-            <p className="mt-5 max-w-2xl mx-auto" style={{ fontFamily: "'Inter', sans-serif", fontSize: "14px", fontWeight: 300, color: "#6B7355", lineHeight: 1.8 }}>
+            <p className="mt-5 max-w-2xl mx-auto" style={{ fontFamily: "'Inter', sans-serif", fontSize: "18px", fontWeight: 300, color: "#6B7355", lineHeight: 1.8 }}>
               Kisah mereka yang telah membawa nilai-nilai luhur pesantren ke seluruh penjuru dunia. Angka ini bukan sekadar statistik, melainkan bukti nyata dedikasi kami.
             </p>
         </div>
@@ -45,7 +45,7 @@ export function StatsBar() {
               <span 
                 style={{ 
                   fontFamily: "'Inter', sans-serif", 
-                  fontSize: "15px", 
+                  fontSize: "18px", 
                   fontWeight: 400, 
                   color: "#6B7355" 
                 }}
