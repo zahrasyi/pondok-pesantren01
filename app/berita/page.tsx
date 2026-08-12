@@ -12,7 +12,7 @@ const allBerita = [
     date: "5 Juni 2026",
     title: "Musabaqah Hifzil Qur'an Tahunan Diikuti 400 Peserta dari Seluruh Nusantara",
     excerpt: "Kompetisi Tilawatil Qur'an Nasional 2026 yang diselenggarakan Ma'had An-Noor menyambut santri dari 28 provinsi.",
-    img: "https://images.unsplash.com/photo-1540567736792-f78f6242e4e0?w=700&h=460&fit=crop&auto=format",
+    img: "/berita/1.png",
     featured: true,
   },
   {
@@ -21,7 +21,7 @@ const allBerita = [
     date: "28 Mei 2026",
     title: "Makalah Dosen tentang Bioetika Islam Diterbitkan di Jurnal Internasional Terkemuka",
     excerpt: "Penelitian Dr. Fatimah Zahra yang inovatif mendapat pengakuan dari Oxford Journal of Islamic Studies.",
-    img: "https://images.unsplash.com/photo-1571193161738-deaba9b6cc26?w=700&h=460&fit=crop&auto=format",
+    img: "/berita/2.png",
     featured: false,
   },
   {
@@ -30,7 +30,7 @@ const allBerita = [
     date: "20 Mei 2026",
     title: "Penerimaan 2026: Pendaftaran Dibuka untuk Semua Program Sarjana",
     excerpt: "Calon santri dapat mengajukan pendaftaran melalui portal daring. Batas waktu: 15 Agustus.",
-    img: "https://images.unsplash.com/photo-1514369118554-e20d93546b30?w=700&h=460&fit=crop&auto=format",
+    img: "/berita/3.png",
     featured: false,
   },
   {
@@ -39,7 +39,7 @@ const allBerita = [
     date: "12 Mei 2026",
     title: "Sayap Perpustakaan Baru & Pusat Sumber Digital Resmi Dibuka",
     excerpt: "Baitul Hikmah Digital Library kini menyediakan akses ke lebih dari 120.000 teks Islam klasik dan kontemporer.",
-    img: "https://images.unsplash.com/photo-1741699428220-65f37f3fbbcb?w=700&h=460&fit=crop&auto=format",
+    img: "/berita/4.png",
     featured: false,
   },
   {
@@ -48,7 +48,7 @@ const allBerita = [
     date: "5 Mei 2026",
     title: "Santri Ma'had An-Noor Raih Juara 1 MTQ Tingkat Nasional",
     excerpt: "Muhammad Hafizh Abdurrahman, santri semester 6, berhasil meraih medali emas pada MTQ Nasional di Makassar.",
-    img: "https://images.unsplash.com/photo-1720873160840-d5934323bb23?w=700&h=460&fit=crop&auto=format",
+    img: "/berita/gebyar.png",
     featured: false,
   },
   {
@@ -57,7 +57,7 @@ const allBerita = [
     date: "25 April 2026",
     title: "Seminar Internasional Fiqh Kontemporer Hadirkan Ulama dari 12 Negara",
     excerpt: "Ma'had An-Noor sukses menyelenggarakan seminar internasional dengan peserta dari Malaysia, Mesir, Arab Saudi, dan lainnya.",
-    img: "https://images.unsplash.com/photo-1623314556929-69d34cb19010?w=700&h=460&fit=crop&auto=format",
+    img: "/hero/amaliyah.png",
     featured: false,
   },
   {
@@ -66,7 +66,7 @@ const allBerita = [
     date: "25 April 2026",
     title: "Seminar Internasional Fiqh Kontemporer Hadirkan Ulama dari 12 Negara",
     excerpt: "Ma'had An-Noor sukses menyelenggarakan seminar internasional dengan peserta dari Malaysia, Mesir, Arab Saudi, dan lainnya.",
-    img: "https://images.unsplash.com/photo-1623314556929-69d34cb19010?w=700&h=460&fit=crop&auto=format",
+    img: "/program/safari2tah.png",
     featured: false,
   },
 ];

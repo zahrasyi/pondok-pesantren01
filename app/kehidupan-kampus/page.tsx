@@ -5,7 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { PageBanner } from "@/components/PageBanner";
 import { Footer } from "@/components/Footer";
 
-// Data Kegiatan Pondok (7 Event Utama)
+// Data Kegiatan Pondok (Ditambah jadi 9 agar tombol Load More berfungsi)
 const kegiatanPondok = [
   {
     title: "Wisuda Tahfidz & Purna Siswa",
@@ -25,22 +25,52 @@ const kegiatanPondok = [
   {
     title: "Haul Akbar",
     desc: "Merawat ingatan, menyambung sanad. Sebuah perhelatan besar yang dihadiri ribuan jamaah, santri, dan alumni untuk mendoakan serta mengenang jasa perjuangan Muassis (pendiri) pondok, K.H. Hasan Bashori Yasin.",
-    img: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800&h=600&fit=crop&auto=format"
+    img: "/kegiatan/haul.png"
   },
   {
     title: "Perkemahan (Khutbatul Arsy / Pramuka)",
     desc: "Membangun mental pejuang di alam terbuka. Ajang pendidikan karakter yang melatih kemandirian, kerja sama tim (teamwork), dan ketangguhan fisik santri melalui kegiatan kepramukaan yang dikemas secara Islami.",
-    img: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&h=600&fit=crop&auto=format"
+    img: "/kegiatan/kemah2.png"
   },
   {
     title: "Rihlah (Perjalanan Edukatif)",
     desc: "Tadabbur alam dan penyegaran pikiran. Agenda perjalanan edukatif di luar lingkungan pesantren untuk memperluas wawasan santri sekaligus mensyukuri keindahan ciptaan Allah SWT.",
-    img: "https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=800&h=600&fit=crop&auto=format"
+    img: "/kegiatan/rihlah.png"
   },
+  // --- 3 Contoh Tambahan untuk ditest Load More ---
+  {
+    title: "Muhadharah (Latihan Pidato)",
+    desc: "Melatih kepercayaan diri dan public speaking santri dalam tiga bahasa (Arab, Inggris, Indonesia) untuk mencetak dai dan pemimpin yang artikulatif.",
+    img: "/kegiatan/muhadhoroh.png"
+  },
+  {
+    title: "Manasik Haji",
+    desc: "Ujian mental dan intelektual yang ketat di mana santri diuji kedalaman pemahaman materinya secara langsung di hadapan majelis asatidz.",
+    img: "/kegiatan/mhaji.png"
+  },
+  {
+    title: "Pekan Olahraga",
+    desc: "Ajang tahunan untuk menyalurkan bakat, minat, dan sportivitas santri melalui berbagai cabang perlombaan olahraga dan kesenian Islami.",
+    img: "/kegiatan/olga.png"
+  },
+  {
+    title: "Laporan Pertanggungjawaban",
+    desc: "Ajang tahunan untuk menyalurkan bakat, minat, dan sportivitas santri melalui berbagai cabang perlombaan olahraga dan kesenian Islami.",
+    img: "/kegiatan/opdh.png"
+  },
+  {
+    title: "Tahfidz",
+    desc: "Ajang tahunan untuk menyalurkan bakat, minat, dan sportivitas santri melalui berbagai cabang perlombaan olahraga dan kesenian Islami.",
+    img: "/kegiatan/tahfidz.png"
+  },{
+    title: "Tarhib Ramadhan",
+    desc: "Ajang tahunan untuk menyalurkan bakat, minat, dan sportivitas santri melalui berbagai cabang perlombaan olahraga dan kesenian Islami.",
+    img: "/kegiatan/tarhib.png"
+  }
 ];
 
 const fasilitas = [
-  { nama: "Masjid Jami' An-Noor", desc: "Masjid berkapasitas 1.500 jamaah sebagai pusat spiritual kehidupan pondok.", img: "https://images.unsplash.com/photo-1717246070626-b236a59ef2cc?w=600&h=400&fit=crop&auto=format" },
+  { nama: "Masjid Jami' Daarul Huda", desc: "Masjid berkapasitas 1.500 jamaah sebagai pusat spiritual kehidupan pondok.", img: "https://images.unsplash.com/photo-1717246070626-b236a59ef2cc?w=600&h=400&fit=crop&auto=format" },
   { nama: "Baitul Hikmah Library", desc: "Perpustakaan digital dengan koleksi lebih dari 120.000 referensi Islam klasik dan modern.", img: "https://images.unsplash.com/photo-1571193161738-deaba9b6cc26?w=600&h=400&fit=crop&auto=format" },
   { nama: "Asrama Santri", desc: "Asrama putra dan putri terpisah dengan fasilitas modern yang nyaman dan kondusif.", img: "https://images.unsplash.com/photo-1762628052475-622104e499a3?w=600&h=400&fit=crop&auto=format" },
   { nama: "Taman & Area Terbuka", desc: "Lingkungan pondok yang asri dan hijau untuk mendukung ketenangan jiwa dalam belajar.", img: "https://images.unsplash.com/photo-1720323650006-6dd831b7c8b3?w=600&h=400&fit=crop&auto=format" },
@@ -55,7 +85,7 @@ const prestasiSantriwati = [
 const organisasi = [
   { nama: "Himpunan Mahasiswa Tahfizh", desc: "Wadah pengembangan program hafalan dan tilawah Al-Qur'an." },
   { nama: "Lembaga Debat Islam", desc: "Melatih kemampuan berpikir kritis dan argumentasi berdasarkan dalil." },
-  { nama: "Bulletin An-Noor", desc: "Media jurnalistik santri untuk menulis dan menyebarkan ilmu." },
+  { nama: "Bulletin Daarul Huda", desc: "Media jurnalistik santri untuk menulis dan menyebarkan ilmu." },
   { nama: "Majelis Kaligrafi", desc: "Seni khat Islam sebagai ekspresi keindahan dan spiritualitas." },
   { nama: "Tim Pengabdian Masyarakat", desc: "Program dakwah dan pelayanan sosial di komunitas sekitar pondok." },
   { nama: "Koperasi Santri", desc: "Melatih jiwa wirausaha yang halal dan pengelolaan ekonomi Islam." },
@@ -63,6 +93,12 @@ const organisasi = [
 
 export default function KehidupanPondokPage() {
   const [hovFasilitas, setHovFasilitas] = useState<number | null>(null);
+  
+  // State untuk mengontrol tombol Load More
+  const [showAllKegiatan, setShowAllKegiatan] = useState(false);
+  
+  // Jika showAllKegiatan true, tampilkan semua. Jika false, batasi hanya 6 pertama.
+  const displayedKegiatan = showAllKegiatan ? kegiatanPondok : kegiatanPondok.slice(0, 6);
 
   return (
     <main className="min-h-screen bg-[#F8F6F1]">
@@ -71,12 +107,11 @@ export default function KehidupanPondokPage() {
         eyebrow="Kehidupan Pondok"
         title="Hidup di"
         titleItalic="Daarul Huda"
-
         desc="Lingkungan pesantren kami membentuk karakter, ukhuwah, dan kecintaan mendalam terhadap ilmu yang melampaui batas kelas."
         img="https://images.unsplash.com/photo-1776982298226-496bb56db7a3?w=1600&h=900&fit=crop&auto=format"
       />
 
-      {/* Kegiatan & Event di Pondok (Desain Card Baru, Bukan News) */}
+      {/* Kegiatan & Event di Pondok */}
       <section className="bg-[#1E3A1E] py-28 px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="mb-16" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(32px, 4vw, 46px)", fontWeight: 500, color: "#F8F6F1", lineHeight: 1.2 }}>
@@ -84,7 +119,7 @@ export default function KehidupanPondokPage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {kegiatanPondok.map((item, i) => (
+            {displayedKegiatan.map((item, i) => (
               <div 
                 key={i} 
                 className="bg-[#F8F6F1] border border-[rgba(184,150,12,0.2)] rounded-2xl overflow-hidden flex flex-col group hover:border-[#B8960C] transition-all duration-500 shadow-lg"
@@ -99,7 +134,7 @@ export default function KehidupanPondokPage() {
                 </div>
                 <div className="p-8 flex flex-col flex-grow justify-between">
                   <div>
-                    <h3 className="mb-4 text-[#00000] group-hover:text-[#B8960C] transition-colors duration-300" style={{ fontFamily: "'Playfair Display', serif", fontSize: "20px", fontWeight: 500, lineHeight: 1.3 }}>
+                    <h3 className="mb-4 text-[#000000] group-hover:text-[#B8960C] transition-colors duration-300" style={{ fontFamily: "'Playfair Display', serif", fontSize: "20px", fontWeight: 600, lineHeight: 1.3 }}>
                       {item.title}
                     </h3>
                     <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 300, color: "rgba(0,0,0,0.75)", lineHeight: 1.75 }}>
@@ -110,6 +145,27 @@ export default function KehidupanPondokPage() {
               </div>
             ))}
           </div>
+
+          {/* Tombol Load More akan muncul jika jumlah kegiatan lebih dari 6 */}
+          {kegiatanPondok.length > 6 && (
+            <div className="mt-14 flex justify-center">
+              <button
+                onClick={() => setShowAllKegiatan(!showAllKegiatan)}
+                className="bg-[#B8960C] text-[#1A2410] hover:bg-[#F8F6F1] transition-colors duration-300 shadow-md"
+                style={{ 
+                  fontFamily: "'Inter', sans-serif", 
+                  fontSize: "13px", 
+                  fontWeight: 600, 
+                  letterSpacing: "0.05em",
+                  textTransform: "uppercase",
+                  padding: "14px 36px", 
+                  borderRadius: "9999px" 
+                }}
+              >
+                {showAllKegiatan ? "Tampilkan Lebih Sedikit" : "Muat Lebih Banyak"}
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -169,6 +225,7 @@ export default function KehidupanPondokPage() {
       </section>
 
       {/* Organisasi & Komunitas Santri */}
+      {/* Organisasi & Komunitas Santri */}
       <section className="bg-[#F8F6F1] py-24 px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="mb-12" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 3.5vw, 42px)", fontWeight: 500, color: "#1A2410" }}>
@@ -177,14 +234,25 @@ export default function KehidupanPondokPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[rgba(30,58,30,0.1)]">
             {organisasi.map((o) => (
               <div key={o.nama} className="bg-white p-8 hover:bg-[#1E3A1E] group transition-colors duration-300 cursor-default">
-                <h4 className="mb-3 group-hover:text-[#F8F6F1] transition-colors" style={{ fontFamily: "'Playfair Display', serif", fontSize: "17px", fontWeight: 500, color: "#1A2410" }} >{o.nama}</h4>
-                <p className="group-hover:text-[rgba(248,246,241,0.75)] transition-colors" style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 300, color: "#6B7355", lineHeight: 1.75 }}>{o.desc}</p>
+                {/* Warna dipindah ke className: text-[#1A2410] */}
+                <h4 
+                  className="mb-3 text-[#1A2410] group-hover:text-[#B8960C] transition-colors duration-300" 
+                  style={{ fontFamily: "'Playfair Display', serif", fontSize: "17px", fontWeight: 600 }} 
+                >
+                  {o.nama}
+                </h4>
+                {/* Warna dipindah ke className: text-[#6B7355] */}
+                <p 
+                  className="text-[#6B7355] group-hover:text-[#F8F6F1] transition-colors duration-300" 
+                  style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 300, lineHeight: 1.75 }}
+                >
+                  {o.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       <Footer />
     </main>
   );

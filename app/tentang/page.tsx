@@ -67,7 +67,7 @@ const TimelineItem = ({ data, index }: { data: any, index: number }) => {
               : "-left-2 border-b border-l z-10"
           }`} />
 
-          {/* Sisi Kiri Card (Teks Deskripsi) - Posisi berubah tergantung genap/ganjil */}
+          {/* Sisi Kiri Card (Teks Deskripsi) */}
           <div className={`p-6 md:p-8 flex-grow order-2 ${isEven ? "md:order-1" : "md:order-2"}`}>
             <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 600, color: "#1A2410", marginBottom: "8px" }}>
               {data.title}
@@ -77,16 +77,13 @@ const TimelineItem = ({ data, index }: { data: any, index: number }) => {
             </p>
           </div>
 
-          {/* Sisi Kanan Card (Tahun/Bulan) - Menempel ke garis tengah */}
+          {/* Sisi Kanan Card (Hanya Angka Tahun/Teks) - Tulisan 'TAHUN' dihapus */}
           <div className={`flex flex-col items-center justify-center p-6 bg-[#F8F6F1] shrink-0 min-w-[120px] order-1 ${
             isEven 
               ? "md:order-2 border-b md:border-b-0 md:border-l border-[rgba(30,58,30,0.08)] rounded-t-xl md:rounded-r-xl md:rounded-tl-none" 
               : "md:order-1 border-b md:border-b-0 md:border-r border-[rgba(30,58,30,0.08)] rounded-t-xl md:rounded-l-xl md:rounded-tr-none"
           }`}>
-            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7355", marginBottom: "4px" }}>
-              Tahun
-            </span>
-            <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "22px", fontWeight: 700, color: "#B8960C", textAlign: "center", lineHeight: 1.1 }}>
+            <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "22px", fontWeight: 700, color: "#B8960C", textAlign: "center", lineHeight: 1.2 }}>
               {data.year}
             </span>
           </div>

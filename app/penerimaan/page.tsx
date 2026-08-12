@@ -37,7 +37,7 @@ export default function PenerimaanPage() {
       <PageBanner
         eyebrow="Penerimaan Santri Baru"
         title="Bergabunglah dalam"
-        titleItalic="Komunitas Ulama"
+        titleItalic="Barisan Penjaga Al-Qur'an"
         desc="Kami membuka pintu selebar-lebarnya bagi mereka yang bersungguh-sungguh menuntut ilmu demi kebaikan umat."
         img="https://images.unsplash.com/photo-1555300873-660313ab1518?w=1600&h=900&fit=crop&auto=format"
       />
@@ -47,7 +47,7 @@ export default function PenerimaanPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-10">
             <div className="w-8 h-px bg-[#B8960C]" />
-            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 400, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8960C" }}>Jadwal Penerimaan 2026</span>
+            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 400, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8960C" }}>Jadwal Penerimaan 2026</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[rgba(30,58,30,0.1)]">
             {[
@@ -57,15 +57,15 @@ export default function PenerimaanPage() {
             ].map((f) => (
               <div key={f.fase} className="bg-white p-8">
                 <div className="mb-1" style={{ fontFamily: "'Inter', sans-serif", fontSize: "9px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8960C" }}>{f.fase}</div>
-                <div className="mb-6" style={{ fontFamily: "'Playfair Display', serif", fontSize: "20px", fontWeight: 500, color: "#1A2410" }}>{f.fase}</div>
+                <div className="mb-6" style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 500, color: "#1A2410" }}>{f.fase}</div>
                 {[
                   { label: "Dibuka", val: f.buka },
                   { label: "Ditutup", val: f.tutup },
                   { label: "Pengumuman", val: f.pengumuman },
                 ].map((r) => (
                   <div key={r.label} className="flex justify-between py-3 border-b border-[rgba(30,58,30,0.08)] last:border-0">
-                    <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 300, color: "#6B7355" }}>{r.label}</span>
-                    <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 500, color: "#1A2410" }}>{r.val}</span>
+                    <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "16px", fontWeight: 300, color: "#6B7355" }}>{r.label}</span>
+                    <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "16px", fontWeight: 500, color: "#1A2410" }}>{r.val}</span>
                   </div>
                 ))}
               </div>
@@ -96,14 +96,14 @@ export default function PenerimaanPage() {
                       style={{ background: activeStep === i ? "#1E3A1E" : "transparent", border: `1px solid ${activeStep === i ? "#1E3A1E" : "rgba(30,58,30,0.25)"}` }}>
                       {activeStep > i
                         ? <Check size={12} color="#F8F6F1" />
-                        : <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 500, color: activeStep === i ? "#F8F6F1" : "#6B7355" }}>{step.num}</span>
+                        : <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 500, color: activeStep === i ? "#F8F6F1" : "#6B7355" }}>{step.num}</span>
                       }
                     </div>
                     {i < steps.length - 1 && <div className="w-px flex-1 my-2" style={{ background: activeStep > i ? "#1E3A1E" : "rgba(30,58,30,0.15)", minHeight: "40px" }} />}
                   </div>
                   <div className="pb-8">
-                    <div className="mb-1" style={{ fontFamily: "'Playfair Display', serif", fontSize: "16px", fontWeight: 500, color: activeStep === i ? "#1A2410" : "#6B7355", transition: "color 0.3s" }}>{step.title}</div>
-                    {activeStep === i && <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 300, color: "#6B7355", lineHeight: 1.75, maxWidth: "360px" }}>{step.desc}</p>}
+                    <div className="mb-1" style={{ fontFamily: "'Playfair Display', serif", fontSize: "17px", fontWeight: 500, color: activeStep === i ? "#1A2410" : "#6B7355", transition: "color 0.3s" }}>{step.title}</div>
+                    {activeStep === i && <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px", fontWeight: 300, color: "#6B7355", lineHeight: 1.75, maxWidth: "360px" }}>{step.desc}</p>}
                   </div>
                 </button>
               ))}
@@ -123,9 +123,9 @@ export default function PenerimaanPage() {
               {syarat.map((s, i) => (
                 <li key={i} className="flex gap-4 items-start">
                   <div className="w-5 h-5 flex-shrink-0 mt-0.5 flex items-center justify-center" style={{ background: "#1E3A1E" }}>
-                    <Check size={10} color="#F8F6F1" />
+                    <Check size={11} color="#F8F6F1" />
                   </div>
-                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "14px", fontWeight: 300, color: "#6B7355", lineHeight: 1.7 }}>{s}</span>
+                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px", fontWeight: 300, color: "#6B7355", lineHeight: 1.7 }}>{s}</span>
                 </li>
               ))}
             </ul>
