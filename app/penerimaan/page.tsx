@@ -23,7 +23,7 @@ const syarat = [
 ];
 
 const beasiswa = [
-  { nama: "Beasiswa Penuh An-Noor", cakupan: "Biaya pendidikan, asrama, dan makan", kuota: "20 penerima/tahun" },
+  { nama: "Beasiswa Penuh", cakupan: "Biaya pendidikan, asrama, dan makan", kuota: "20 penerima/tahun" },
   { nama: "Beasiswa Tahfizh", cakupan: "Keringanan 75% biaya pendidikan", kuota: "Bagi penghafal 15 juz+" },
   { nama: "Beasiswa Prestasi", cakupan: "Keringanan 50% biaya pendidikan", kuota: "Berdasarkan nilai ujian masuk" },
 ];
@@ -38,7 +38,6 @@ export default function PenerimaanPage() {
         eyebrow="Penerimaan Santri Baru"
         title="Bergabunglah dalam"
         titleItalic="Komunitas Ulama"
-        arabic="ادخلوها بسلام"
         desc="Kami membuka pintu selebar-lebarnya bagi mereka yang bersungguh-sungguh menuntut ilmu demi kebaikan umat."
         img="https://images.unsplash.com/photo-1555300873-660313ab1518?w=1600&h=900&fit=crop&auto=format"
       />
@@ -144,15 +143,12 @@ export default function PenerimaanPage() {
           <h2 className="mb-10" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(24px, 3vw, 38px)", fontWeight: 500, color: "#F8F6F1" }}>
             Kami Mendukung <em>Setiap Penuntut Ilmu</em>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[rgba(248,246,241,0.08)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 text-center items-center gap-px bg-[rgba(248,246,241,0.08)]">
             {beasiswa.map((b) => (
               <div key={b.nama} className="p-8" style={{ background: "rgba(26,36,16,0.4)" }}>
-                <div className="mb-4 w-10 h-10 flex items-center justify-center" style={{ background: "#B8960C" }}>
-                  <span style={{ fontFamily: "'Amiri', serif", fontSize: "18px", color: "#1A2410" }}>م</span>
-                </div>
-                <h4 className="mb-3" style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 500, color: "#F8F6F1" }}>{b.nama}</h4>
-                <p className="mb-4" style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 300, color: "rgba(248,246,241,0.6)", lineHeight: 1.75 }}>{b.cakupan}</p>
-                <div style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 400, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B8960C" }}>{b.kuota}</div>
+                <h4 className="mb-3" style={{ fontFamily: "'Playfair Display', serif", fontSize: "20px", fontWeight: 500, color: "#F8F6F1" }}>{b.nama}</h4>
+                <p className="mb-4" style={{ fontFamily: "'Inter', sans-serif", fontSize: "16px", fontWeight: 300, color: "rgba(248,246,241,0.6)", lineHeight: 1.75 }}>{b.cakupan}</p>
+                <div style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 400, letterSpacing: "0.1em", textTransform: "uppercase", color: "#B8960C" }}>{b.kuota}</div>
               </div>
             ))}
           </div>
@@ -164,7 +160,7 @@ export default function PenerimaanPage() {
         <div className="max-w-2xl mx-auto text-center">
           <div className="mb-3" style={{ fontFamily: "'Amiri', serif", fontSize: "22px", color: "#B8960C" }}>بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
           <h2 className="mb-4" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(24px, 3vw, 38px)", fontWeight: 500, color: "#1A2410" }}>Mulai Pendaftaran Online</h2>
-          <p className="mb-8" style={{ fontFamily: "'Inter', sans-serif", fontSize: "14px", fontWeight: 300, color: "#6B7355", lineHeight: 1.8 }}>
+          <p className="mb-8" style={{ fontFamily: "'Inter', sans-serif", fontSize: "18px", fontWeight: 300, color: "#6B7355", lineHeight: 1.8 }}>
             Isi formulir pendaftaran secara daring. Tim kami akan menghubungimu dalam 2 hari kerja.
           </p>
           <div className="flex flex-col gap-4 mb-6">
@@ -185,7 +181,7 @@ export default function PenerimaanPage() {
             Kirim Pendaftaran
           </button>
           <p className="mt-4" style={{ fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 300, color: "#6B7355" }}>
-            Pertanyaan? Hubungi <a href="mailto:penerimaan@mahadalnoor.ac.id" style={{ color: "#1E3A1E", textDecoration: "underline" }}>penerimaan@mahadalnoor.ac.id</a>
+            Pertanyaan? Hubungi <a href="mailto:pondokdaarulhuda@gmail.com" style={{ color: "#1E3A1E", textDecoration: "underline" }}>pondokdaarulhuda@gmail.com</a>
           </p>
         </div>
       </section>

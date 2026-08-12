@@ -10,17 +10,17 @@ const kegiatanPondok = [
   {
     title: "Wisuda Tahfidz & Purna Siswa",
     desc: "Momen paling sakral dan membanggakan. Perayaan bagi para santri yang telah menyelesaikan amanah besar sebagai Hamilul Qur'an (penghafal 30 juz) dan penyerahan ijazah kelulusan sebagai bekal mereka melangkah ke jenjang pendidikan tinggi.",
-    img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop&auto=format"
+    img: "/hero/wisudatahfidz.png"
   },
   {
     title: "Amaliyah Tadris (Praktek Mengajar)",
     desc: "Menyiapkan kader pemimpin umat. Santri kelas akhir diuji kemampuannya untuk terjun langsung menjadi pendidik yang profesional, mempraktikkan ilmu pedagogik dengan pengawasan ketat dari para asatidz.",
-    img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop&auto=format"
+    img: "/program/amaliyahtad.png"
   },
   {
     title: "Safari Khotmil Qur'an",
     desc: "Berdakwah dan membumikan Al-Qur'an. Rombongan santri Daarul Huda turun langsung ke tengah masyarakat di berbagai daerah untuk menyelenggarakan khataman Al-Qur'an dan menebarkan keberkahan ilmu.",
-    img: "https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&h=600&fit=crop&auto=format"
+    img: "/program/safaritah.png"
   },
   {
     title: "Haul Akbar",
@@ -79,14 +79,8 @@ export default function KehidupanPondokPage() {
       {/* Kegiatan & Event di Pondok (Desain Card Baru, Bukan News) */}
       <section className="bg-[#1E3A1E] py-28 px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-3 mb-5">
-            <div className="w-8 h-px bg-[#B8960C]" />
-            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 400, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8960C" }}>
-              Aktivitas & Tradisi
-            </span>
-          </div>
           <h2 className="mb-16" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(32px, 4vw, 46px)", fontWeight: 500, color: "#F8F6F1", lineHeight: 1.2 }}>
-            Kegiatan Utama di <em>Pondok Pesantren</em>
+            Kegiatan di <em>Pondok Pesantren</em>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -122,10 +116,6 @@ export default function KehidupanPondokPage() {
       {/* Fasilitas Pondok */}
       <section className="bg-[#F8F6F1] py-24 px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-3 mb-5">
-            <div className="w-8 h-px bg-[#B8960C]" />
-            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 400, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8960C" }}>Fasilitas Pondok</span>
-          </div>
           <h2 className="mb-12" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 3.5vw, 42px)", fontWeight: 500, color: "#1A2410" }}>
             Infrastruktur Pendukung <em>Pendidikan</em>
           </h2>
@@ -155,10 +145,6 @@ export default function KehidupanPondokPage() {
       {/* Prestasi Santriwati */}
       <section className="bg-[#EDE8DC] py-24 px-8 border-t border-[rgba(30,58,30,0.08)]">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-3 mb-5">
-            <div className="w-8 h-px bg-[#B8960C]" />
-            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 400, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8960C" }}>Kebanggaan Kami</span>
-          </div>
           <h2 className="mb-12" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 3.5vw, 42px)", fontWeight: 500, color: "#1A2410" }}>
             Prestasi Gemilang <em>Santriwati</em>
           </h2>
@@ -185,10 +171,6 @@ export default function KehidupanPondokPage() {
       {/* Organisasi & Komunitas Santri */}
       <section className="bg-[#F8F6F1] py-24 px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-3 mb-5">
-            <div className="w-8 h-px bg-[#B8960C]" />
-            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 400, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8960C" }}>Komunitas Santri</span>
-          </div>
           <h2 className="mb-12" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 3.5vw, 42px)", fontWeight: 500, color: "#1A2410" }}>
             Berkembang Bersama <em>Organisasi</em>
           </h2>
