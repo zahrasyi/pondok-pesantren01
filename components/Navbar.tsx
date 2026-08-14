@@ -10,22 +10,22 @@ import {
 
 // Data untuk Dropdown "Tentang"
 const tentangMenu = [
-  { title: "Sejarah & Visi", desc: "Perjalanan dan cita-cita luhur pesantren", icon: Target, href: "/tentang#sejarah" },
-  { title: "Kepemimpinan", desc: "Mengenal para pengasuh dan asatidz", icon: Users, href: "/tentang#kepemimpinan" },
-  { title: "Struktur Organisasi", desc: "Struktur kepengurusan pondok", icon: Building2, href: "/tentang#fasilitas" }
+  { title: "Sejarah & Visi", desc: "Perjalanan dan cita-cita luhur pesantren", icon: Target, href: "/tentang" },
+  { title: "Kepemimpinan", desc: "Mengenal para pengasuh dan asatidz", icon: Users, href: "/tentang/kepemimpinan" },
+  { title: "Struktur Organisasi", desc: "Struktur kepengurusan pondok", icon: Building2, href: "/tentang/struktur" }
 ];
 
 // Data untuk Dropdown "Program"
 const programMenu = [
-  { title: "MI", desc: "Madrasah Ibtidaiyah", icon: BookOpen, badge: "Unggulan", href: "/program#tahfidz" },
-  { title: "SMPI", desc: "Sekolah Menengah Pertama Islam", icon: ScrollText, href: "/program#kitab" },
-  { title: "MA", desc: "Madrasah Aliyah", icon: BriefcaseBusiness, href: "/program#bahasa" }
+  { title: "MI", desc: "Madrasah Ibtidaiyah", icon: BookOpen, badge: "Unggulan", href: "/program/mi" },
+  { title: "SMPI", desc: "Sekolah Menengah Pertama Islam", icon: ScrollText, href: "/program/smpi" },
+  { title: "MA", desc: "Madrasah Aliyah", icon: BriefcaseBusiness, href: "/program/ma" }
 ];
 
 // Navigasi standar untuk Mobile (dan menu tanpa dropdown)
 const navItems = [
   { label: "Tentang", href: "/tentang" },
-  { label: "Program", href: "/program" },
+  { label: "Jenjang", href: "/program" },
   { label: "Penerimaan", href: "/penerimaan" },
   { label: "Kegiatan", href: "/kehidupan-kampus" },
   { label: "Berita", href: "/berita" },
@@ -112,7 +112,7 @@ export function Navbar() {
                 borderBottom: isActive("/program") ? `1px solid #1A2410` : "none", paddingBottom: "2px",
               }}
             >
-              Program <ChevronDown size={14} className="transition-transform duration-300 group-hover:rotate-180" />
+              Jenjang <ChevronDown size={14} className="transition-transform duration-300 group-hover:rotate-180" />
             </Link>
             
             {/* Area Dropdown Program */}
@@ -163,20 +163,20 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* CTA Button */}
-        <div className="hidden lg:flex items-center gap-4">
-          <Link
-            href="/penerimaan"
-            style={{
-              fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 500, letterSpacing: "0.1em",
-              textTransform: "uppercase", color: "#F8F6F1", background: "#1E3A1E", padding: "10px 24px",
-              textDecoration: "none", transition: "all 0.25s", borderRadius: "6px"
+        {/* Tombol Daftar Sekarang */}
+        <Link 
+            href="/penerimaan" 
+            className="bg-[#1A2410] text-[#F8F6F1] hover:bg-[#B8960C] hover:text-[#1A2410] transition-colors duration-300 px-3 py-2 rounded-md"
+            style={{ 
+              fontFamily: "'Inter', sans-serif", 
+              fontSize: "13px", 
+              fontWeight: 400, 
+              letterSpacing: "0.1em", 
+              textTransform: "uppercase" 
             }}
-            className="hover:bg-[#B8960C] hover:text-[#1A2410]"
           >
             Daftar Sekarang
           </Link>
-        </div>
 
         {/* Mobile toggle */}
         <button

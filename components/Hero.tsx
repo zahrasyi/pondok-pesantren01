@@ -74,13 +74,12 @@ export function Hero() {
 
         {/* Headline - Animasi urutan 2 */}
         <h1 
-          className={`max-w-xl mb-6 transition-all duration-1000 delay-300 ease-out transform ${
+          className={`max-w-4xl mb-6 transition-all duration-1000 delay-300 ease-out transform ${
             mounted ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
-          style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 6vw, 76px)", fontWeight: 500, color: "#F8F6F1", lineHeight: 1.1, letterSpacing: "-0.01em" }}
+          style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(30px, 8vw, 55px)", fontWeight: 500, color: "#F8F6F1", lineHeight:1.1, letterSpacing: "-0.01em" }}
         >
-          The Fountain of<br />
-          <em>Wisdom</em> 
+          Berakhlak Mulia, Berbadan Sehat, Berpengetahuan Luas<br />
         </h1>
 
         {/* Arabic subtitle - Animasi urutan 3 */}
@@ -95,12 +94,12 @@ export function Hero() {
 
         {/* Body - Animasi urutan 4 */}
         <p 
-          className={`max-w-2xl mb-10 transition-all duration-1000 delay-700 ease-out transform ${
+          className={`max-w-5xl mb-10 transition-all duration-1000 delay-700 ease-out transform ${
             mounted ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
           style={{ fontFamily: "'Inter', sans-serif", fontSize: "20px", fontWeight: 300, color: "rgba(248,246,241,0.75)", lineHeight: 1.75 }}
         >
-          Pendidikan Islam holistik yang memadukan keilmuan klasik dengan pengetahuan kontemporer, membentuk ulama dan pemimpin untuk dunia modern.
+          Pondok Pesantren Daaral Huda Litahfidhil Qur'an, Sebuah lembaga pendidikan Islam yang tidak hanya membina ilmu, namun juga menanamkan cinta sejati kepada Kalamullah, Al-Qur'anal Karim.
         </p>
 
         {/* CTAs - Animasi urutan 5 */}
@@ -126,7 +125,7 @@ export function Hero() {
             Mulai Pendaftaran
             <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
           </Link>
-          <Link
+          {/* <Link
             href="/program"
             style={{
               fontFamily: "'Inter', sans-serif",
@@ -142,7 +141,7 @@ export function Hero() {
             className="hover:opacity-70"
           >
             Jelajahi Program
-          </Link>
+          </Link> */}
         </div>
       </div>
 

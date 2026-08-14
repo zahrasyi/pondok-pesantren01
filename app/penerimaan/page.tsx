@@ -39,7 +39,7 @@ export default function PenerimaanPage() {
         title="Bergabunglah dalam"
         titleItalic="Barisan Penjaga Al-Qur'an"
         desc="Kami membuka pintu selebar-lebarnya bagi mereka yang bersungguh-sungguh menuntut ilmu demi kebaikan umat."
-        img="https://images.unsplash.com/photo-1555300873-660313ab1518?w=1600&h=900&fit=crop&auto=format"
+        img="/penerimaan.png"
       />
 
       {/* Jadwal */}

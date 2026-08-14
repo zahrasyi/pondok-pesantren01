@@ -10,21 +10,21 @@ const programs = [
   {
     id: "MI",
     title: "Madrasah Ibtidaiyah (MI)",
-    desc: "Deskripsi singkat mengenai program pendidikan dasar...",
+    desc: " ",
     img: "/program/safari.png",
     href: "/program/mi", // <-- Ubah menjadi /program/mi (huruf kecil, nama foldernya)
   },
   {
     id: "SMPI",
     title: "SMP Islam (SMPI)",
-    desc: "Deskripsi singkat mengenai program SMP Islam...",
+    desc: " ",
     img: "/program/safari2.png",
     href: "/program/smpi", // <-- Ubah menjadi /program/smpi
   },
   {
     id: "MA",
     title: "Madrasah Aliyah (MA)",
-    desc: "Deskripsi singkat mengenai program Madrasah Aliyah...",
+    desc: " ",
     img: "/program/MA.png",
     href: "/program/ma", // <-- Ubah menjadi /program/ma
   },

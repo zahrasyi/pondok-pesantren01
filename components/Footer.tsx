@@ -39,10 +39,13 @@ export function Footer() {
 
           <div className="flex flex-col gap-2 mt-2">
             <p style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 700, color: "#1A2410" }}>
-            Jl. Murcoyo III, RT 20 / RW 06, Krajan, Gondanglegi Wetan, Kecamatan Gondanglegi, Kabupaten Malang, Jawa Timur 65174.
+            Jl. Murcoyo III, RT 20 / RW 06, Krajan, Gondanglegi Wetan, Kecamatan Gondanglegi, Kabupaten Malang, Jawa Timur 65174. (Kampus 1)
             </p>
             <p style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 700, color: "#1A2410" }}>
-            Jl. Raya Gondanglegi-Dampit No. 37, Dusun Krajan, Desa Sepanjang, Kecamatan Gondanglegi, Kabupaten Malang, Jawa Timur 65174
+            Jl. Raya Gondanglegi-Dampit No. 37, Dusun Krajan, Desa Sepanjang, Kecamatan Gondanglegi, Kabupaten Malang, Jawa Timur 65174. (Kampus 2)
+            </p>
+            <p style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 700, color: "#1A2410" }}>
+            Jl. KH. Ahmad Dahlan No.20, Dusun Krajan, Putat Kidul, Kecamatan Gondanglegi, Kabupaten Malang, Jawa Timur 65174. (Kampus 3)
             </p>
 
             <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "14px", fontWeight: 400, color: "#1A2410", marginTop: "8px" }}>
@@ -92,13 +95,15 @@ export function Footer() {
       </div>
 
       {/* Tombol Back to Top (Pojok Kanan Bawah) */}
-      <button 
-        onClick={scrollToTop}
-        className="absolute bottom-0 right-0 w-12 h-12 bg-[#1E3A1E] text-[#F8F6F1] flex items-center justify-center hover:bg-[#B8960C] transition-colors z-50 cursor-pointer border-none"
-        aria-label="Kembali ke atas"
-      >
-        <ChevronUp size={24} strokeWidth={2.5} />
-      </button>
+      <div className="w-full flex justify-center mt-7 pb-2">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="w-12 h-12 flex items-center justify-center bg-[#B8960C] text-[#F8F6F1] rounded-full shadow-md hover:animate-bounce transition-all"
+          aria-label="Kembali ke atas"
+        >
+          <ChevronUp size={24} strokeWidth={2.5} />
+        </button>
+      </div>
     </footer>
   );
 }

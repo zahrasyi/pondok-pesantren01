@@ -126,10 +126,10 @@ export default function TentangPage() {
               Perjalanan <em>Panjang</em> 
             </h2>
             <p className="mb-4" style={{ fontFamily: "'Inter', sans-serif", fontSize: "16px", fontWeight: 300, color: "#6B7355", lineHeight: 1.85 }}>
-              Didirikan pada tahun 1969 oleh K.H. Hasan Bashori Yasin, Pondok Pesantren Daarul Huda berawal dari sebuah rintisan kecil di Gondanglegi, Malang, di tengah berbagai keterbatasan sarana dan infrastruktur. Dengan semangat pengabdian dan prinsip "modernitas tanpa meninggalkan tradisi", pesantren ini perlahan tumbuh.
+              Pondok Pesantren Daarul Huda Litahfidhil Qur'an, yang didirikan pada tahun 1969, telah menapaki perjalanan lebih dari lima dekade sebagai lembaga pendidikan yang berkomitmen mencetak generasi Qur'ani yang tangguh dan berakhlak mulia. Melalui pendekatan terpadu antara hafalan, adab, dan kedisiplinan, pesantren ini kini telah berekspansi menjadi tiga lokasi pembinaan, yakni Daarul Huda 1 di Gondanglegi Wetan sebagai cikal bakal dan pusat kegiatan, Daarul Huda 2 di Desa Sepanjang yang terus dikembangkan fasilitasnya, serta Daarul Huda 3 di Putat Kidul yang difungsikan khusus sebagai Pondok Karantina Tahfidz bagi santri putri.
             </p>
             <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "16px", fontWeight: 300, color: "#6B7355", lineHeight: 1.85 }}>
-              Berkat ketulusan niat (Ikhlas) sang pendiri dan diteruskan oleh generasi penerusnya, pesantren ini kini telah bertransformasi menjadi institusi berskala besar dengan tiga lokasi pengembangan yang berdedikasi mencetak Hufadzhul Qur'an yang ahli dalam kitab kuning sekaligus menguasai pendidikan formal berstandar nasional.
+              Selain berfokus melahirkan para huffadz pembela kalamullah, pondok pesantren ini turut memastikan para santrinya memiliki kemandirian melalui pembekalan beragam kecakapan hidup, mulai dari public speaking, bahasa asing, kepramukaan, seni, olahraga, tata boga, pertanian, hingga kewirausahaan. Pembinaan yang menyeluruh ini telah membuahkan berbagai prestasi membanggakan di tingkat kabupaten, provinsi, maupun nasional, sekaligus menegaskan visi pondok bahwa santri yang hebat tidak hanya diukur dari kuatnya hafalan, tetapi juga dari keluasan ilmu, keterampilan, dan kesiapannya dalam membawa manfaat bagi masyarakat luas.
             </p>
           </div>
           <div>
@@ -141,10 +141,10 @@ export default function TentangPage() {
               Tujuan <em>Mulia</em>
             </h2>
             <p className="mb-6" style={{ fontFamily: "'Inter', sans-serif", fontSize: "16px", fontWeight: 300, color: "#6B7355", lineHeight: 1.85 }}>
-              <strong style={{ fontWeight: 600, color: "#1A2410" }}>Visi:</strong> Menjadi pusat pendidikan Islam terdepan yang melahirkan ulama, cendekiawan, dan pemimpin berkarakter islami untuk peradaban global.
+              <strong style={{ fontWeight: 600, color: "#1A2410" }}>Visi:</strong> Mencetak Generasi Qur’ani Berakhlak Mulia, Berbadan Sehat dan Berpengetahuan Luas
             </p>
             <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "16px", fontWeight: 300, color: "#6B7355", lineHeight: 1.85 }}>
-              <strong style={{ fontWeight: 600, color: "#1A2410" }}>Misi:</strong> Menyelenggarakan pendidikan Islam holistik yang mengintegrasikan ilmu-ilmu agama dan umum, membangun karakter santri yang berilmu, berakhlak, dan berdedikasi tinggi kepada masyarakat.
+              <strong style={{ fontWeight: 600, color: "#1A2410" }}>Misi:</strong> Mencetak Generasi Qur'ani, Menanamkan Akhlak Mulia, Meningkatkan Kesehatan Fisik dan Mental, Mengembangkan Wawasan Ilmu Pengetahuan, dan Memupuk Kemandirian dan Kepedulian Sosial. 
             </p>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function TentangPage() {
       </section>
 
       {/* Pimpinan */}
-      <section className="bg-[#EDE8DC] py-24 px-8 border-t border-[rgba(30,58,30,0.05)]">
+      {/* <section className="bg-[#EDE8DC] py-24 px-8 border-t border-[rgba(30,58,30,0.05)]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-center gap-3 mb-16 text-center">
             <div className="w-8 h-px bg-[#B8960C]" />
@@ -218,7 +218,7 @@ export default function TentangPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       
       <Footer />
     </main>

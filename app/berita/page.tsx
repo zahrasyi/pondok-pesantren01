@@ -86,10 +86,10 @@ export default function BeritaPage() {
     <main className="min-h-screen bg-[#F8F6F1]">
       <Navbar />
       <PageBanner
-        eyebrow="Berita & Pengumuman"
+        eyebrow="Berita"
         title="Kabar Terkini"
         desc="Ikuti perkembangan terbaru dari Daarul Huda — kegiatan akademik, prestasi santri, dan pengumuman resmi."
-        img="https://images.unsplash.com/photo-1663572092918-e31425e93121?w=1600&h=900&fit=crop&auto=format"
+        img="/news/kemahh.png"
       />
 
       <section className="bg-[#F8F6F1] py-24 px-8">

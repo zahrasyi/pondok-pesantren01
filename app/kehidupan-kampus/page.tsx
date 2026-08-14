@@ -4,8 +4,10 @@ import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { PageBanner } from "@/components/PageBanner";
 import { Footer } from "@/components/Footer";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-// Data Kegiatan Pondok (Ditambah jadi 9 agar tombol Load More berfungsi)
+// Data Kegiatan Pondok
 const kegiatanPondok = [
   {
     title: "Wisuda Tahfidz & Purna Siswa",
@@ -37,7 +39,6 @@ const kegiatanPondok = [
     desc: "Tadabbur alam dan penyegaran pikiran. Agenda perjalanan edukatif di luar lingkungan pesantren untuk memperluas wawasan santri sekaligus mensyukuri keindahan ciptaan Allah SWT.",
     img: "/kegiatan/rihlah.png"
   },
-  // --- 3 Contoh Tambahan untuk ditest Load More ---
   {
     title: "Muhadharah (Latihan Pidato)",
     desc: "Melatih kepercayaan diri dan public speaking santri dalam tiga bahasa (Arab, Inggris, Indonesia) untuk mencetak dai dan pemimpin yang artikulatif.",
@@ -62,18 +63,31 @@ const kegiatanPondok = [
     title: "Tahfidz",
     desc: "Ajang tahunan untuk menyalurkan bakat, minat, dan sportivitas santri melalui berbagai cabang perlombaan olahraga dan kesenian Islami.",
     img: "/kegiatan/tahfidz.png"
-  },{
+  },
+  {
     title: "Tarhib Ramadhan",
     desc: "Ajang tahunan untuk menyalurkan bakat, minat, dan sportivitas santri melalui berbagai cabang perlombaan olahraga dan kesenian Islami.",
     img: "/kegiatan/tarhib.png"
   }
 ];
 
-const fasilitas = [
-  { nama: "Masjid Jami' Daarul Huda", desc: "Masjid berkapasitas 1.500 jamaah sebagai pusat spiritual kehidupan pondok.", img: "https://images.unsplash.com/photo-1717246070626-b236a59ef2cc?w=600&h=400&fit=crop&auto=format" },
-  { nama: "Baitul Hikmah Library", desc: "Perpustakaan digital dengan koleksi lebih dari 120.000 referensi Islam klasik dan modern.", img: "https://images.unsplash.com/photo-1571193161738-deaba9b6cc26?w=600&h=400&fit=crop&auto=format" },
-  { nama: "Asrama Santri", desc: "Asrama putra dan putri terpisah dengan fasilitas modern yang nyaman dan kondusif.", img: "https://images.unsplash.com/photo-1762628052475-622104e499a3?w=600&h=400&fit=crop&auto=format" },
-  { nama: "Taman & Area Terbuka", desc: "Lingkungan pondok yang asri dan hijau untuk mendukung ketenangan jiwa dalam belajar.", img: "https://images.unsplash.com/photo-1720323650006-6dd831b7c8b3?w=600&h=400&fit=crop&auto=format" },
+// Data Kampus Baru
+const kampusData = [
+  {
+    nama: "Kampus 1",
+    desc: "Berlokasi di Jl. Murcoyo III, Gondanglegi Wetan. Merupakan cikal bakal berdirinya pesantren dan menjadi pusat utama kegiatan pendidikan Al-Qur’an.",
+    img: "/kegiatan/kampus1.jpg"
+  },
+  {
+    nama: "Kampus 2",
+    desc: "Berada di Desa Sepanjang. Terus dalam proses pembangunan dan pengembangan untuk memberikan fasilitas modern yang lebih baik bagi para santri.",
+    img: "/kegiatan/kampus2.jpg"
+  },
+  {
+    nama: "Kampus 3",
+    desc: "Berlokasi di Desa Putat Kidul. Difungsikan secara khusus sebagai Pondok Karantina Tahfidz untuk mencetak santriwati Hamilul Qur'an.",
+    img: "/about/babussalam.jpg"
+  }
 ];
 
 const prestasiSantriwati = [
@@ -92,12 +106,9 @@ const organisasi = [
 ];
 
 export default function KehidupanPondokPage() {
-  const [hovFasilitas, setHovFasilitas] = useState<number | null>(null);
-  
-  // State untuk mengontrol tombol Load More
   const [showAllKegiatan, setShowAllKegiatan] = useState(false);
+  const [activeKampus, setActiveKampus] = useState(1); // Default kampus 2 terbuka
   
-  // Jika showAllKegiatan true, tampilkan semua. Jika false, batasi hanya 6 pertama.
   const displayedKegiatan = showAllKegiatan ? kegiatanPondok : kegiatanPondok.slice(0, 6);
 
   return (
@@ -108,7 +119,7 @@ export default function KehidupanPondokPage() {
         title="Hidup di"
         titleItalic="Daarul Huda"
         desc="Lingkungan pesantren kami membentuk karakter, ukhuwah, dan kecintaan mendalam terhadap ilmu yang melampaui batas kelas."
-        img="https://images.unsplash.com/photo-1776982298226-496bb56db7a3?w=1600&h=900&fit=crop&auto=format"
+        img="/kegiatan/dhuha.png"
       />
 
       {/* Kegiatan & Event di Pondok */}
@@ -146,7 +157,6 @@ export default function KehidupanPondokPage() {
             ))}
           </div>
 
-          {/* Tombol Load More akan muncul jika jumlah kegiatan lebih dari 6 */}
           {kegiatanPondok.length > 6 && (
             <div className="mt-14 flex justify-center">
               <button
@@ -155,11 +165,11 @@ export default function KehidupanPondokPage() {
                 style={{ 
                   fontFamily: "'Inter', sans-serif", 
                   fontSize: "13px", 
-                  fontWeight: 600, 
+                  fontWeight: 400, 
                   letterSpacing: "0.05em",
                   textTransform: "uppercase",
                   padding: "14px 36px", 
-                  borderRadius: "9999px" 
+                  borderRadius: "5px" 
                 }}
               >
                 {showAllKegiatan ? "Tampilkan Lebih Sedikit" : "Muat Lebih Banyak"}
@@ -169,31 +179,53 @@ export default function KehidupanPondokPage() {
         </div>
       </section>
 
-      {/* Fasilitas Pondok */}
-      <section className="bg-[#F8F6F1] py-24 px-8">
+      {/* Tiga Lokasi Kampus (Menggantikan Fasilitas) */}
+      <section className="bg-[#F8F6F1] py-24 px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <h2 className="mb-12" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 3.5vw, 42px)", fontWeight: 500, color: "#1A2410" }}>
-            Infrastruktur Pendukung <em>Pendidikan</em>
+            Tiga Lokasi <em>Kampus</em> Daarul Huda
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[rgba(30,58,30,0.1)]">
-            {fasilitas.map((f, i) => (
-              <div
-                key={f.nama}
-                className="relative overflow-hidden cursor-pointer group"
-                style={{ height: "300px" }}
-                onMouseEnter={() => setHovFasilitas(i)}
-                onMouseLeave={() => setHovFasilitas(null)}
-              >
-                <img src={f.img} alt={f.nama} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
-                <div className="absolute inset-0 transition-all duration-500" style={{ background: hovFasilitas === i ? "rgba(26,36,16,0.75)" : "rgba(26,36,16,0.35)" }} />
-                <div className="absolute inset-0 flex flex-col justify-end p-8">
-                  <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "20px", fontWeight: 500, color: "#F8F6F1" }}>{f.nama}</div>
-                  <p className="mt-2 transition-all duration-500 overflow-hidden" style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 300, color: "rgba(248,246,241,0.75)", lineHeight: 1.7, maxHeight: hovFasilitas === i ? "80px" : "0", opacity: hovFasilitas === i ? 1 : 0 }}>
-                    {f.desc}
-                  </p>
+
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-4 h-[700px] md:h-[450px]">
+            {kampusData.map((kampus, index) => {
+              const isActive = activeKampus === index;
+              return (
+                <div
+                  key={index}
+                  onClick={() => setActiveKampus(index)}
+                  className={`relative cursor-pointer transition-all duration-700 ease-in-out rounded-3xl overflow-hidden shadow-sm hover:shadow-md flex flex-col ${
+                    isActive ? "w-full md:w-[50%] bg-white" : "w-full md:w-[25%] bg-[#1E3A1E]"
+                  }`}
+                >
+                  <div className={`relative w-full overflow-hidden transition-all duration-700 ${isActive ? "h-[60%] md:h-[65%]" : "h-full"}`}>
+                    <img
+                      src={kampus.img}
+                      alt={kampus.nama}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                    {!isActive && <div className="absolute inset-0 bg-black/40 transition-opacity duration-500" />}
+                    <div className={`absolute inset-0 flex items-center justify-center p-6 transition-opacity duration-500 ${isActive ? "opacity-0" : "opacity-100"}`}>
+                      <h3 className="text-white text-center text-xl md:text-2xl font-medium tracking-wide drop-shadow-lg" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        {kampus.nama.split(" ")[0]} {kampus.nama.split(" ")[1]}
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div
+                    className={`flex flex-col justify-center px-8 transition-all duration-700 ${
+                      isActive ? "h-[40%] md:h-[35%] opacity-100" : "h-0 opacity-0"
+                    }`}
+                  >
+                    <h3 className="mb-2 text-[#1A2410]" style={{ fontFamily: "'Playfair Display', serif", fontSize: "20px", fontWeight: 600 }}>
+                      {kampus.nama}
+                    </h3>
+                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "14px", fontWeight: 300, color: "#6B7355", lineHeight: 1.6 }}>
+                      {kampus.desc}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -201,9 +233,28 @@ export default function KehidupanPondokPage() {
       {/* Prestasi Santriwati */}
       <section className="bg-[#EDE8DC] py-24 px-8 border-t border-[rgba(30,58,30,0.08)]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="mb-12" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 3.5vw, 42px)", fontWeight: 500, color: "#1A2410" }}>
-            Prestasi Gemilang <em>Santriwati</em>
-          </h2>
+          
+          {/* Header dengan Animasi Lampu Kedap-Kedip */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 3.5vw, 42px)", fontWeight: 500, color: "#1A2410", lineHeight: 1.2 }}>
+              Prestasi Gemilang <em>Santriwati</em>
+            </h2>
+            
+            {/* Badge Status Live/Update */}
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white shadow-sm border border-[rgba(30,58,30,0.08)]">
+              {/* Lampu Indikator Kedap-Kedip */}
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+              </span>
+              {/* Teks Status */}
+              <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: "#1A2410" }}>
+                Update 2026
+              </span>
+            </div>
+          </div>
+          
+          {/* Grid Kartu Prestasi */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {prestasiSantriwati.map((p, idx) => (
               <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-[rgba(30,58,30,0.06)] flex flex-col justify-between">
@@ -221,10 +272,28 @@ export default function KehidupanPondokPage() {
               </div>
             ))}
           </div>
+
+          {/* Tombol Lihat Semua Berita */}
+          <div className="mt-16 flex justify-center">
+            <Link
+              href="/berita"
+              className="group inline-flex items-center gap-3 pb-2 border-b border-[#1A2410] text-[#1A2410] hover:text-[#B8960C] hover:border-[#B8960C] transition-all duration-300"
+              style={{ 
+                fontFamily: "'Inter', sans-serif", 
+                fontSize: "13px", 
+                fontWeight: 400, 
+                letterSpacing: "0.15em",
+                textTransform: "uppercase"
+              }}
+            >
+              Semua Berita
+              <ArrowRight size={18} strokeWidth={2} className="group-hover:translate-x-1 transition-transform duration-300" />
+            </Link>
+          </div>
+
         </div>
       </section>
 
-      {/* Organisasi & Komunitas Santri */}
       {/* Organisasi & Komunitas Santri */}
       <section className="bg-[#F8F6F1] py-24 px-8">
         <div className="max-w-7xl mx-auto">
@@ -234,14 +303,12 @@ export default function KehidupanPondokPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[rgba(30,58,30,0.1)]">
             {organisasi.map((o) => (
               <div key={o.nama} className="bg-white p-8 hover:bg-[#1E3A1E] group transition-colors duration-300 cursor-default">
-                {/* Warna dipindah ke className: text-[#1A2410] */}
                 <h4 
                   className="mb-3 text-[#1A2410] group-hover:text-[#B8960C] transition-colors duration-300" 
                   style={{ fontFamily: "'Playfair Display', serif", fontSize: "17px", fontWeight: 600 }} 
                 >
                   {o.nama}
                 </h4>
-                {/* Warna dipindah ke className: text-[#6B7355] */}
                 <p 
                   className="text-[#6B7355] group-hover:text-[#F8F6F1] transition-colors duration-300" 
                   style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 300, lineHeight: 1.75 }}
@@ -253,6 +320,7 @@ export default function KehidupanPondokPage() {
           </div>
         </div>
       </section>
+      
       <Footer />
     </main>
   );

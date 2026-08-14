@@ -80,10 +80,10 @@ export function About() {
             </h2>
 
             <p className="mb-6" style={{ fontFamily: "'Inter', sans-serif", fontSize: "18px", fontWeight: 300, color: "rgba(248,246,241,0.75)", lineHeight: 1.85 }}>
-              Pondok Pesantren Daarul Huda Li Tahfidhil Qur'an didirikan di Gondanglegi, Malang, berawal dari keterbatasan ekonomi dan infrastruktur. Didirikan berlandaskan keikhlasan dan keteguhan hati pengasuhnya, pesantren ini berkembang dari sebuah rintisan kecil menjadi institusi pendidikan yang diakui luas.
+              Didirikan pada tahun 1969, pesantren ini telah menapaki perjalanan panjang dalam mencetak generasi Qur’ani yang tangguh. berakhlak mulia, dan siap mengabdi untuk agama, bangsa, dan umat, Selama lebih dari lima dekade, Daarul Huda telah menjadi rumah bagi para santri yang datang dengan harapan, dan pulang membawa hafalan serta cahaya petunjak ilahi.
             </p>
             <p className="mb-10" style={{ fontFamily: "'Inter', sans-serif", fontSize: "18px", fontWeight: 300, color: "rgba(248,246,241,0.6)", lineHeight: 1.85 }}>
-              Pesantren ini memiliki ekosistem yang unik dengan memadukan metode salaf (klasik) dan modernitas, mencetak generasi penghafal Al-Qur'an yang tangguh, berwawasan global, sekaligus ahli dalam literatur Islam klasik.
+              Sebagai pondok pesantren tahfidz, Daarul Huda Litahfidhil Qur'an berkomitmen kuat dalam membina para penghafal Al-Qur'an, dengan pendekatan yang terpadu antara hafalan, pemahaman adab, dan kedisiplinan. Dengan semangat ikhlas lillahi ta'ala, Lembaga ini terus berupaya menjadi pilar risalah Al-qur'an di tengah derasnya arus zaman.
             </p>
           </div>
         </div>
