@@ -14,13 +14,13 @@ const pimpinan = [
   { 
     name: "Hj. Lilik Chaidaroh", 
     role: "Pengasuh & Pakar Kurikulum Kitab Kuning", 
-    img: "/admisss.png",
+    img: "/about/pengasuh.png",
     desc: "Meneruskan estafet perjuangan dengan memperkuat sistem pendidikan madrasah diniyah (Salafiyah) dan menjaga tradisi literasi kitab kuning di lingkungan santri."
   },
   { 
     name: "K.H. Abdul Munif Ma'sum", 
     role: "Pengasuh & Pimpinan Sinergi Pendidikan Modern", 
-    img: "/admisss.png",
+    img: "/about/pengasuh.png",
     desc: "Tokoh sentral yang membawa pesantren bertransformasi menuju era modern, mengintegrasikan sistem pendidikan formal nasional dengan nilai-nilai kepesantrenan."
   },
 ];

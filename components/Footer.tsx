@@ -1,14 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronUp } from "lucide-react"; // Hanya mengambil ikon panah dari Lucide
-import { FaFacebookF, FaInstagram, FaEnvelope, FaTwitter, FaYoutube } from "react-icons/fa"; // Ikon sosmed dari React Icons
+import { ChevronUp, Icon } from "lucide-react"; // Hanya mengambil ikon panah dari Lucide
+import { FaFacebookF, FaInstagram, FaEnvelope, FaTwitter, FaYoutube, FaTiktok } from "react-icons/fa"; // Ikon sosmed dari React Icons
+import { url } from "inspector";
 
 export function Footer() {
   // Fungsi untuk menggulir layar kembali ke paling atas secara halus
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  const socialLinks = [
+    { Icon: FaFacebookF, url: "https://www.facebook.com/daarulhudamalang/" }, // Ganti dengan link asli
+    { Icon: FaInstagram, url: "https://www.instagram.com/pondok.daarulhuda/" },
+    { Icon: FaEnvelope, url: "mailto:pondokdaarulhuda@gmail.com" },       // mailto untuk email
+    { Icon: FaYoutube, url: "https://youtube.com/c/daarulhuda" },
+    { Icon: FaTiktok, url:"https://www.tiktok.com/@daarulhudachannel"},
+  ];
 
   return (
     <footer className="bg-[#EDE8DC] pt-16 pb-16 px-8 relative border-t border-[rgba(30,58,30,0.1)]">
@@ -64,14 +72,14 @@ export function Footer() {
           <div className="flex flex-col md:items-end gap-3">
             <div className="flex flex-wrap gap-5 justify-start md:justify-end">
               {['Sejarah', 'Artikel', 'Maklumat'].map((item) => (
-                <Link key={item} href="#" className="hover:text-[#B8960C] transition-colors" style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px", fontWeight: 500, color: "#1A2410" }}>
+                <Link key={item} href="/tentang" className="hover:text-[#B8960C] transition-colors" style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px", fontWeight: 500, color: "#1A2410" }}>
                   {item}
                 </Link>
               ))}
             </div>
             <div className="flex flex-wrap gap-5 justify-start md:justify-end">
               {['Santri Putra', 'Santri Putri'].map((item) => (
-                <Link key={item} href="#" className="hover:text-[#B8960C] transition-colors" style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px", fontWeight: 500, color: "#1A2410" }}>
+                <Link key={item} href="/program" className="hover:text-[#B8960C] transition-colors" style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px", fontWeight: 500, color: "#1A2410" }}>
                   {item}
                 </Link>
               ))}
@@ -80,15 +88,20 @@ export function Footer() {
 
           {/* Ikon Sosial Media */}
           <div className="flex gap-3 mt-4">
-            {[FaFacebookF, FaInstagram, FaEnvelope, FaTwitter, FaYoutube].map((Icon, idx) => (
-              <Link 
-                key={idx} 
-                href="#" 
-                className="w-10 h-10 rounded-full border border-[rgba(26,36,16,0.3)] flex items-center justify-center text-[#1A2410] hover:border-[#B8960C] hover:text-[#B8960C] transition-all duration-300"
-              >
-                <Icon size={16} />
-              </Link>
-            ))}
+            {socialLinks.map((item, idx) => {
+              const Icon = item.Icon;
+              return (
+                <Link 
+                  key={idx} 
+                  href={item.url} 
+                  target="_blank" // Agar membuka tab baru (opsional tapi disarankan untuk link luar)
+                  rel="noopener noreferrer" // Praktik keamanan untuk target="_blank"
+                  className="w-10 h-10 rounded-full border border-[rgba(26,36,16,0.3)] flex items-center justify-center text-[#1A2410] hover:border-[#B8960C] hover:text-[#B8960C] transition-all duration-300"
+                >
+                  <Icon size={16} />
+                </Link>
+              );
+            })}
           </div>
 
         </div>

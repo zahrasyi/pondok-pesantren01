@@ -65,7 +65,7 @@ export default function ProgramPage() {
               {/* Bagian Kanan: Konten Teks & Tombol */}
               <div className="w-full md:w-7/12 p-8 md:p-12 flex flex-col justify-center items-start">
                 <div className="mb-3" style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "#B8960C" }}>
-                  Program Pendidikan
+                  Jenjang Pendidikan
                 </div>
                 
                 <h3 className="mb-4" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(24px, 3vw, 32px)", fontWeight: 600, color: "#1A2410", lineHeight: 1.2 }}>
@@ -89,7 +89,7 @@ export default function ProgramPage() {
                     textDecoration: "none",
                   }}
                 >
-                  Pelajari Lebih Lanjut
+                  Lihat Selengkapnya
                 </Link>
               </div>
             </div>

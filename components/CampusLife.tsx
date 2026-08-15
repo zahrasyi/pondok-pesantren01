@@ -5,18 +5,9 @@ import { useState } from "react";
 export function CampusLife() {
   const [hoveredHighlight, setHoveredHighlight] = useState<number | null>(null);
   const tiles = [
-    {
-      img: "https://images.unsplash.com/photo-1762628052475-622104e499a3?w=700&h=500&fit=crop&auto=format",
-      label: "Taman yang Tenang",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1720323650006-6dd831b7c8b3?w=700&h=300&fit=crop&auto=format",
-      label: "Jalan Kampus",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1632782532013-bd3f5f9197db?w=700&h=300&fit=crop&auto=format",
-      label: "Gedung Akademik",
-    },
+    { img: "https://images.unsplash.com/photo-1762628052475-622104e499a3?w=700&h=500&fit=crop&auto=format", label: "Taman yang Tenang" },
+    { img: "https://images.unsplash.com/photo-1720323650006-6dd831b7c8b3?w=700&h=300&fit=crop&auto=format", label: "Jalan Kampus" },
+    { img: "https://images.unsplash.com/photo-1632782532013-bd3f5f9197db?w=700&h=300&fit=crop&auto=format", label: "Gedung Akademik" },
   ];
 
   const highlights = [
@@ -27,10 +18,9 @@ export function CampusLife() {
   ];
 
   return (
-    <section id="campus-life" className="bg-[#F8F6F1] py-32 px-8">
+    <section id="campus-life" className="bg-[#F8F6F1] py-32 px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="mb-16">
+        <div data-aos="fade-up" className="mb-16">
           <div className="flex items-center gap-3 mb-5">
             <div className="w-8 h-px bg-[#B8960C]" />
             <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 400, letterSpacing: "0.2em", textTransform: "uppercase", color: "#B8960C" }}>
@@ -47,14 +37,9 @@ export function CampusLife() {
           </div>
         </div>
 
-        {/* Photo collage */}
-        <div className="grid grid-cols-2 gap-px bg-[rgba(30,58,30,0.1)] mb-px" style={{ height: "420px" }}>
+        <div data-aos="fade-up" data-aos-delay="200" className="grid grid-cols-2 gap-px bg-[rgba(30,58,30,0.1)] mb-px" style={{ height: "420px" }}>
           <div className="relative overflow-hidden group cursor-pointer bg-[#1A2410]">
-            <img
-              src={tiles[0].img}
-              alt={tiles[0].label}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-            />
+            <img src={tiles[0].img} alt={tiles[0].label} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
             <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(26,36,16,0.5) 0%, transparent 60%)" }} />
             <div className="absolute bottom-4 left-4" style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(248,246,241,0.7)" }}>
               {tiles[0].label}
@@ -63,11 +48,7 @@ export function CampusLife() {
           <div className="flex flex-col gap-px">
             {tiles.slice(1).map((tile, i) => (
               <div key={i} className="relative overflow-hidden group cursor-pointer bg-[#1A2410] flex-1">
-                <img
-                  src={tile.img}
-                  alt={tile.label}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                />
+                <img src={tile.img} alt={tile.label} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(26,36,16,0.5) 0%, transparent 60%)" }} />
                 <div className="absolute bottom-3 left-4" style={{ fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 400, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(248,246,241,0.7)" }}>
                   {tile.label}
@@ -77,13 +58,14 @@ export function CampusLife() {
           </div>
         </div>
 
-        {/* Highlights grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px mt-30 bg-[rgba(30,58,30,0.1)]">
           {highlights.map((h, i) => {
             const on = hoveredHighlight === i;
             return (
               <div
                 key={h.label}
+                data-aos="fade-up"
+                data-aos-delay={i * 100} // Muncul berurutan 1 per 1
                 className="p-8 transition-colors duration-300"
                 style={{ background: on ? "#1E3A1E" : "#FFFFFF", cursor: "default" }}
                 onMouseEnter={() => setHoveredHighlight(i)}

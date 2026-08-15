@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ScrollProvider from "@/components/ScrollProvider"; // Memanggil provider animasi kita
 
 export const metadata: Metadata = {
-  title: "Ma'had Al-Noor",
-  description: "Company Profile Pondok Pesantren",
+  title: "Ma'had Al-Noor", // Judul bawaanmu
+  description: "Company Profile", // Deskripsi bawaanmu
 };
 
 export default function RootLayout({
@@ -13,7 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body>{children}</body>
+      <body>
+        {/* Menyuntikkan AOS dan Lenis ke seluruh halaman */}
+        <ScrollProvider>
+          {children}
+        </ScrollProvider>
+      </body>
     </html>
   );
 }

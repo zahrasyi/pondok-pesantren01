@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { 
-  Menu, X, ChevronDown, ArrowRight, 
+  Menu, X, ChevronDown, 
   BookOpen, Users, Building2, ScrollText, BriefcaseBusiness, Target 
 } from "lucide-react";
 
@@ -22,13 +22,14 @@ const programMenu = [
   { title: "MA", desc: "Madrasah Aliyah", icon: BriefcaseBusiness, href: "/program/ma" }
 ];
 
-// Navigasi standar untuk Mobile (dan menu tanpa dropdown)
+// Navigasi standar untuk Mobile (dan menu tanpa dropdown di Desktop)
+// URUTAN TELAH DISESUAIKAN: Tentang -> Jenjang -> Kegiatan -> Berita -> Penerimaan
 const navItems = [
   { label: "Tentang", href: "/tentang" },
   { label: "Jenjang", href: "/program" },
-  { label: "Penerimaan", href: "/penerimaan" },
   { label: "Kegiatan", href: "/kehidupan-kampus" },
   { label: "Berita", href: "/berita" },
+  { label: "Penerimaan", href: "/penerimaan" },
 ];
 
 export function Navbar() {
@@ -94,9 +95,6 @@ export function Navbar() {
                     </Link>
                   ))}
                 </div>
-                {/* <Link href="/tentang" className="bg-[#EDE8DC] p-4 text-center flex items-center justify-center gap-2 text-[#1A2410] hover:text-[#B8960C] transition-colors" style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 500, textDecoration: 'none' }}>
-                  Kenali Kami Lebih Dekat <ArrowRight size={14} />
-                </Link> */}
               </div>
             </div>
           </li>
@@ -138,9 +136,6 @@ export function Navbar() {
                     </Link>
                   ))}
                 </div>
-                {/* <Link href="/program" className="bg-[#EDE8DC] p-4 text-center flex items-center justify-center gap-2 text-[#1A2410] hover:text-[#B8960C] transition-colors" style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 500, textDecoration: 'none' }}>
-                  Lihat Semua Program <ArrowRight size={14} />
-                </Link> */}
               </div>
             </div>
           </li>
@@ -166,17 +161,17 @@ export function Navbar() {
         {/* Tombol Daftar Sekarang */}
         <Link 
             href="/penerimaan" 
-            className="bg-[#1A2410] text-[#F8F6F1] hover:bg-[#B8960C] hover:text-[#1A2410] transition-colors duration-300 px-3 py-2 rounded-md"
+            className="bg-[#1A2410] text-[#F8F6F1] hover:bg-[#B8960C] hover:text-[#1A2410] transition-colors duration-300 px-6 py-3 rounded-md hidden lg:inline-flex"
             style={{ 
               fontFamily: "'Inter', sans-serif", 
               fontSize: "13px", 
-              fontWeight: 400, 
+              fontWeight: 600, 
               letterSpacing: "0.1em", 
               textTransform: "uppercase" 
             }}
           >
             Daftar Sekarang
-          </Link>
+        </Link>
 
         {/* Mobile toggle */}
         <button
