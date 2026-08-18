@@ -1,11 +1,16 @@
 "use client";
 
-import { useState } from "react";
-import { Check } from "lucide-react";
+// import { useState } from "react";
+// import { Check } from "lucide-react";
+import { Clock, MessageCircle, Home } from "lucide-react";
+import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { PageBanner } from "@/components/PageBanner";
 import { Footer } from "@/components/Footer";
 
+/* ==============================================================================
+   DATA UI LAMA DISEMBUNYIKAN SEMENTARA AGAR TIDAK ERROR (UNCOMMENT JIKA PERLU)
+=================================================================================
 const steps = [
   { num: "01", title: "Siapkan Berkas", desc: "Transkrip akademik, surat rekomendasi, dan pernyataan pribadi yang menguraikan niat menuntut ilmu Islam." },
   { num: "02", title: "Ajukan Pendaftaran", desc: "Lengkapi formulir daring. Pendaftaran tahun 2026 dibuka hingga 15 Agustus 2026." },
@@ -27,9 +32,10 @@ const beasiswa = [
   { nama: "Beasiswa Tahfizh", cakupan: "Keringanan 75% biaya pendidikan", kuota: "Bagi penghafal 15 juz+" },
   { nama: "Beasiswa Prestasi", cakupan: "Keringanan 50% biaya pendidikan", kuota: "Berdasarkan nilai ujian masuk" },
 ];
+============================================================================== */
 
 export default function PenerimaanPage() {
-  const [activeStep, setActiveStep] = useState(0);
+  // const [activeStep, setActiveStep] = useState(0);
 
   return (
     <main className="min-h-screen bg-[#F8F6F1]">
@@ -42,7 +48,57 @@ export default function PenerimaanPage() {
         img="/penerimaan.png"
       />
 
-      {/* Jadwal */}
+      {/* SECTION COMING SOON (AKTIF) */}
+      <section className="py-24 px-8 flex items-center justify-center min-h-[50vh]">
+         <div 
+            data-aos="fade-up" 
+            className="max-w-3xl w-full bg-white p-10 md:p-16 text-center rounded-3xl shadow-sm border border-[rgba(30,58,30,0.06)] relative overflow-hidden"
+         >
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#B8960C] opacity-5 rounded-bl-full pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#1E3A1E] opacity-5 rounded-tr-full pointer-events-none" />
+
+            <div className="flex justify-center mb-8 relative z-10">
+                <div className="w-24 h-24 bg-[#F8F6F1] rounded-full flex items-center justify-center text-[#B8960C] shadow-inner border border-[rgba(184,150,12,0.1)]">
+                    <Clock size={40} strokeWidth={1.5} className="animate-pulse" />
+                </div>
+            </div>
+            
+            <h2 className="mb-5 relative z-10" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(26px, 3.5vw, 40px)", fontWeight: 600, color: "#1A2410", lineHeight: 1.2 }}>
+                Informasi Pendaftaran <br/><em>Sedang Dipersiapkan</em>
+            </h2>
+            
+            <p className="mb-10 max-w-xl mx-auto relative z-10" style={{ fontFamily: "'Inter', sans-serif", fontSize: "16px", fontWeight: 300, color: "#6B7355", lineHeight: 1.8 }}>
+                Terima kasih atas antusiasme Anda. Saat ini panitia penerimaan santri baru Pondok Pesantren Daarul Huda sedang merumuskan jadwal, alur pendaftaran, dan kuota untuk tahun ajaran mendatang. Halaman ini akan segera kami perbarui.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+                <a 
+                    href="https://wa.me/6285331730065" // Silakan ganti dengan nomor admin pondok
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="w-full sm:w-auto flex items-center justify-center gap-3 bg-[#1A2410] text-[#F8F6F1] px-8 py-3.5 rounded-full hover:bg-[#B8960C] transition-colors duration-300 shadow-md" 
+                    style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}
+                >
+                    <MessageCircle size={18} />
+                    Hubungi Admin
+                </a>
+                
+                <Link 
+                    href="/" 
+                    className="w-full sm:w-auto flex items-center justify-center gap-3 border border-[#1A2410] text-[#1A2410] px-8 py-3.5 rounded-full hover:bg-[#F8F6F1] transition-colors duration-300" 
+                    style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}
+                >
+                    <Home size={18} />
+                    Kembali ke Beranda
+                </Link>
+            </div>
+         </div>
+      </section>
+
+      {/* ==============================================================================
+         KODE UI LAMA DISEMBUNYIKAN (HAPUS TANDA KOMENTAR JIKA DATA SUDAH SIAP)
+      ================================================================================== */}
+      {/* 
       <section className="bg-[#EDE8DC] py-20 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-10">
@@ -74,10 +130,8 @@ export default function PenerimaanPage() {
         </div>
       </section>
 
-      {/* Proses & Syarat */}
       <section className="bg-[#F8F6F1] py-24 px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Proses */}
           <div>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-8 h-px bg-[#B8960C]" />
@@ -110,7 +164,6 @@ export default function PenerimaanPage() {
             </div>
           </div>
 
-          {/* Syarat */}
           <div>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-8 h-px bg-[#B8960C]" />
@@ -133,7 +186,6 @@ export default function PenerimaanPage() {
         </div>
       </section>
 
-      {/* Beasiswa */}
       <section className="bg-[#1E3A1E] py-24 px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-10">
@@ -155,7 +207,6 @@ export default function PenerimaanPage() {
         </div>
       </section>
 
-      {/* CTA Form */}
       <section className="bg-[#F8F6F1] py-24 px-8">
         <div className="max-w-2xl mx-auto text-center">
           <div className="mb-3" style={{ fontFamily: "'Amiri', serif", fontSize: "22px", color: "#B8960C" }}>بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ</div>
@@ -185,6 +236,8 @@ export default function PenerimaanPage() {
           </p>
         </div>
       </section>
+      */}
+
       <Footer />
     </main>
   );
