@@ -69,17 +69,25 @@ export function Footer() {
         <div className="flex flex-col md:items-end gap-5 w-full md:w-auto mt-4 md:mt-0">
           
           {/* Tautan Navigasi */}
-          <div className="flex flex-col md:items-end gap-3">
-            <div className="flex flex-wrap gap-5 justify-start md:justify-end">
-              {['Sejarah', 'Artikel', 'Maklumat'].map((item) => (
-                <Link key={item} href="/tentang" className="hover:text-[#B8960C] transition-colors" style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px", fontWeight: 500, color: "#1A2410" }}>
+          <div className="flex flex-col mt-55 md:items-center gap-3">
+            <div className="flex flex-wrap gap-3 justify-start md:justify-center">
+              {['Sejarah'].map((item) => (
+                <Link key={item} href="/tentang" className="text-[#1A2410] hover:text-[#B8960C] transition-colors duration-300" style={{ fontFamily: "'playfair display", fontSize: "17px", fontWeight: 500}}>
                   {item}
                 </Link>
               ))}
-            </div>
-            <div className="flex flex-wrap gap-5 justify-start md:justify-end">
-              {['Santri Putra', 'Santri Putri'].map((item) => (
-                <Link key={item} href="/program" className="hover:text-[#B8960C] transition-colors" style={{ fontFamily: "'Inter', sans-serif", fontSize: "15px", fontWeight: 500, color: "#1A2410" }}>
+              {[ 'Kegiatan'].map((item) => (
+                <Link key={item} href="/kehidupan-kampus" className="text-[#1A2410] hover:text-[#B8960C] transition-colors duration-300" style={{ fontFamily: "playfair display", fontSize: "17px", fontWeight: 500}}>
+                  {item}
+                </Link>
+              ))}
+              {[ 'Berita'].map((item) => (
+                <Link key={item} href="/berita" className="text-[#1A2410] hover:text-[#B8960C] transition-colors duration-300" style={{ fontFamily: "'playfair display", fontSize: "17px", fontWeight: 500}}>
+                  {item}
+                </Link>
+              ))}
+              {[ 'Pendidikan'].map((item) => (
+                <Link key={item} href="/program" className="text-[#1A2410] hover:text-[#B8960C] transition-colors duration-300" style={{ fontFamily: "playfair display", fontSize: "17px", fontWeight: 500}}>
                   {item}
                 </Link>
               ))}
