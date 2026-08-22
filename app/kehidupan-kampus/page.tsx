@@ -186,22 +186,39 @@ export default function KehidupanPondokPage() {
         </div>
       </section>
 
-      {/* Organisasi & Komunitas Santri */}
-      <section className="bg-[#F8F6F1] py-24 px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="mb-12" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 3.5vw, 42px)", fontWeight: 500, color: "#1A2410" }}>
-            Berkembang Bersama <em>Organisasi</em>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[rgba(30,58,30,0.1)]">
-            {organisasi.map((o) => (
-              <div key={o.nama} className="bg-white p-8 hover:bg-[#1E3A1E] group transition-colors duration-300 cursor-default">
-                <h4 className="mb-3 text-[#1A2410] group-hover:text-[#B8960C] transition-colors duration-300" style={{ fontFamily: "'Playfair Display', serif", fontSize: "17px", fontWeight: 600 }}>{o.nama}</h4>
-                <p className="text-[#6B7355] group-hover:text-[#F8F6F1] transition-colors duration-300" style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 300, lineHeight: 1.75 }}>{o.desc}</p>
-              </div>
-            ))}
+      {/* Grid Organisasi - Formasi 2x2 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 border-t border-l border-[rgba(30,58,30,0.1)] mb-20 p-10">
+        {[
+          { 
+            title: "OPDH Putra", 
+            desc: "Organisasi Pelajar Daarul Huda sebagai wadah utama pengembangan kepemimpinan, kemandirian, dan kedisiplinan khusus bagi santri putra." 
+          },
+          { 
+            title: "OPDH Putri", 
+            desc: "Organisasi Pelajar Daarul Huda untuk santri putri, berfokus pada pembentukan karakter tangguh, terampil, berorganisasi, dan berakhlakul karimah." 
+          },
+          { 
+            title: "Koordinator Pramuka Putra", 
+            desc: "Gerakan kepanduan untuk santri putra yang melatih kecakapan fisik, ketangkasan, kepemimpinan lapangan, serta kemandirian di alam bebas." 
+          },
+          { 
+            title: "Koordinator Pramuka Putri", 
+            desc: "Gerakan kepanduan santri putri untuk menanamkan jiwa gotong royong, ketangkasan, dan kedisiplinan yang berlandaskan nilai-nilai keislaman." 
+          },
+        ].map((org, idx) => (
+          <div 
+            key={idx} 
+            className="bg-white p-10 lg:p-14 border-r border-b border-[rgba(30,58,30,0.1)] hover:bg-[#F8F6F1] transition-colors duration-300"
+          >
+            <h3 className="mb-4" style={{ fontFamily: "'Playfair Display', serif", fontSize: "20px", fontWeight: 700, color: "#1A2410" }}>
+              {org.title}
+            </h3>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "14px", fontWeight: 300, color: "#6B7355", lineHeight: 1.7 }}>
+              {org.desc}
+            </p>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
       
       <Footer />
     </main>

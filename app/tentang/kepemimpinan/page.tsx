@@ -14,7 +14,7 @@ const pimpinan = [
   { 
     name: "Hj. Lilik Chaidaroh", 
     role: "Pengasuh & Pakar Kurikulum Kitab Kuning", 
-    img: "/about/11.png",
+    img: "/about/lilik.png",
     desc: "Meneruskan estafet perjuangan dengan memperkuat sistem pendidikan madrasah diniyah (Salafiyah) dan menjaga tradisi literasi kitab kuning di lingkungan santri."
   },
   { 
@@ -58,7 +58,7 @@ export default function KepemimpinanPage() {
                   <img 
                     src={p.img} 
                     alt={p.name} 
-                    className="relative w-64 h-80 object-cover rounded-2xl shadow-lg grayscale hover:grayscale-0 transition-all duration-500" 
+                    className="relative w-64 h-80 object-cover rounded-2xl shadow-lg grayscale-0 hover:grayscale transition-all duration-500" 
                   />
                 </div>
               </div>
@@ -79,7 +79,6 @@ export default function KepemimpinanPage() {
       </section>
 
       {/* Bagian Jajaran Pengurus Yayasan & Guru */}
-      {/* Bagian Jajaran Pengurus Yayasan & Guru */}
       <section className="bg-white py-24 px-8 border-t border-[rgba(30,58,30,0.05)]">
         <div className="max-w-7xl mx-auto">
           
@@ -93,42 +92,40 @@ export default function KepemimpinanPage() {
               Mendedikasikan ilmu dan waktu untuk membimbing santri menjadi generasi Qur'ani yang berakhlak mulia dan berwawasan global.
             </p>
           </div>
-
-          {/* Grid Pengurus Inti */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 mb-20">
-            {[
-              { nama: "Nyai Hj. Lilik Chaidaroh", jabatan: "Pengasuh", img: "/pengurus/nyai-lilik.jpg" },
-              { nama: "Gus H. M. Saifur Rijal", jabatan: "Ketua Yayasan", img: "/pengurus/gus-saifur.jpg" },
-              { nama: "Gus H.M. Luqman Hambali", jabatan: "Wakil Ketua Yayasan", img: "/pengurus/gus-luqman.jpg" },
-              { nama: "Al-Ustadz Fathur Rohman", jabatan: "Sekretaris", img: "/pengurus/ust-fathur.jpg" },
-              { nama: "Al-Ustadzah Miftahul Hamidah", jabatan: "Bendahara", img: "/pengurus/usth-miftahul.jpg" },
-              { nama: "Al-Ustadzah Saisatul Munawwaroh", jabatan: "Bendahara", img: "/pengurus/usth-saisatul.jpg" },
-              { nama: "Nyai Hj. Lilik Chaidaroh", jabatan: "Pengasuh", img: "/pengurus/nyai-lilik.jpg" },
-              { nama: "Gus H. M. Saifur Rijal", jabatan: "Ketua Yayasan", img: "/pengurus/gus-saifur.jpg" },
-              { nama: "Gus H.M. Luqman Hambali", jabatan: "Wakil Ketua Yayasan", img: "/pengurus/gus-luqman.jpg" },
-              { nama: "Al-Ustadz Fathur Rohman", jabatan: "Sekretaris", img: "/pengurus/ust-fathur.jpg" },
-              { nama: "Al-Ustadzah Miftahul Hamidah", jabatan: "Bendahara", img: "/pengurus/usth-miftahul.jpg" },
-              { nama: "Al-Ustadzah Saisatul Munawwaroh", jabatan: "Bendahara", img: "/pengurus/usth-saisatul.jpg" },
-            ].map((item, idx) => (
-              <div key={idx} className="group flex flex-col items-center text-center cursor-default">
-                {/* Bingkai Foto Bulat (rounded-full) */}
-                <div className="relative w-44 h-44 mb-6 overflow-hidden rounded-full border-4 border-[#F8F6F1] shadow-sm bg-[#EDE8DC] transition-transform duration-500 group-hover:-translate-y-2">
-                  <img 
-                    src={item.img} 
-                    alt={item.nama} 
-                    onError={(e) => { e.currentTarget.src = 'https://ui-avatars.com/api/?name=' + item.nama + '&background=1E3A1E&color=F8F6F1&size=256' }}
-                    className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
-                  />
-                </div>
-                <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "20px", fontWeight: 600, color: "#1A2410", lineHeight: 1.3 }}>
-                  {item.nama}
-                </h4>
-                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "#B8960C", marginTop: "10px" }}>
-                  {item.jabatan}
-                </p>
-              </div>
-            ))}
-          </div>
+              
+          {/* Formasi Pengurus Inti - Layout 3 di atas, 2 di bawah */}
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 mb-20">
+  {[
+    { nama: "Gus H. M. Saifur Rijal", jabatan: "Ketua Yayasan", img: "/about/saifur.png" },
+    { nama: "Gus H.M. Luqman Hambali", jabatan: "Wakil Ketua Yayasan", img: "/about/hambali.png" },
+    { nama: "Al-Ustadzah Miftahul Hamidah", jabatan: "Bendahara", img: "/about/saisatul.png" },
+    { nama: "Al-Ustadzah Saisatul Munawwaroh", jabatan: "Bendahara", img: "/about/miftah.png"},
+    { nama: "Al-Ustadzah Miftahul Hamidah", jabatan: "Bendahara", img: "/pengurus/usth-miftahul.jpg" },
+  ].map((item, idx) => (
+    <div 
+      key={idx} 
+      // Lebar kolom diatur manual agar muat 3 sejajar di layar besar
+      className="group flex flex-col items-center text-center cursor-default w-full sm:w-[45%] lg:w-[28%] max-w-[280px]"
+    >
+      {/* KUNCI 1: Tambahan shrink-0 di ujung kanan agar lingkaran tidak ikut gepeng saat layar mengecil */}
+      <div className="relative w-44 h-44 mb-5 overflow-hidden rounded-full border-4 border-[#F8F6F1] shadow-sm bg-[#EDE8DC] transition-transform duration-500 group-hover:-translate-y-2 shrink-0">
+        <img 
+          src={item.img} 
+          alt={item.nama} 
+          onError={(e) => { e.currentTarget.src = 'https://ui-avatars.com/api/?name=' + item.nama + '&background=1E3A1E&color=F8F6F1&size=256' }}
+          /* KUNCI 2: Ganti object-center menjadi object-top agar fokus ke muka/kepala */
+          className="w-full h-full object-cover object-top opacity-90 grayscale-0 hover:grayscale group-hover:opacity-100 transition-all duration-700" 
+        />
+      </div>
+      <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 600, color: "#1A2410", lineHeight: 1.3 }}>
+        {item.nama}
+      </h4>
+      <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "#B8960C", marginTop: "8px" }}>
+        {item.jabatan}
+      </p>
+    </div>
+  ))}
+</div>
         </div>
       </section>
 

@@ -18,8 +18,8 @@ export default function Home() {
       <News />
       <StatsBar />
       <About />
-      <Partners/>
-      {/* <FounderQuote/>
+      {/* <Partners/>
+      <FounderQuote/>
       <Programs />
       <CampusLife /> */}
       <Admissions />
