@@ -52,7 +52,6 @@ const AnimatedCounter = ({ value, duration = 2000 }: { value: number; duration?:
 // 2. Data Statistik (Angka dan Suffix dipisah agar angka bisa dihitung oleh sistem)
 const stats = [
   { num: 2400, suffix: "", label: "Santri Aktif" },
-  { num: 180, suffix: "+", label: "Tenaga Pengajar" },
   { num: 1000, suffix: "", label: "Alumni Tersebar" },
   { num: 800, suffix: "+", label: "Prestasi Diraih" },
 ];
@@ -71,11 +70,11 @@ export function StatsBar() {
         </div>
         
         {/* Layout Grid berbentuk Kartu (Cards) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-10 max-w-5xl mx-auto">
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="bg-white rounded-2xl p-10 flex flex-col items-center text-center shadow-sm border border-[rgba(30,58,30,0.04)] hover:shadow-lg hover:-translate-y-1 transition-all duration-500 group cursor-default"
+              className="w-full sm:w-[30%] bg-white rounded-2xl p-10 flex flex-col items-center text-center shadow-sm border border-[rgba(30,58,30,0.04)] hover:shadow-lg hover:-translate-y-1 transition-all duration-500 group cursor-default"
             >
               {/* Angka Statistik Utama (Animasi dipanggil di sini) */}
               <h3

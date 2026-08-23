@@ -94,38 +94,39 @@ export default function KepemimpinanPage() {
           </div>
               
           {/* Formasi Pengurus Inti - Layout 3 di atas, 2 di bawah */}
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 mb-20">
-  {[
-    { nama: "Gus H. M. Saifur Rijal", jabatan: "Ketua Yayasan", img: "/about/saifur.png" },
-    { nama: "Gus H.M. Luqman Hambali", jabatan: "Wakil Ketua Yayasan", img: "/about/hambali.png" },
-    { nama: "Al-Ustadzah Miftahul Hamidah", jabatan: "Bendahara", img: "/about/saisatul.png" },
-    { nama: "Al-Ustadzah Saisatul Munawwaroh", jabatan: "Bendahara", img: "/about/miftah.png"},
-    { nama: "Al-Ustadzah Miftahul Hamidah", jabatan: "Bendahara", img: "/pengurus/usth-miftahul.jpg" },
-  ].map((item, idx) => (
-    <div 
-      key={idx} 
-      // Lebar kolom diatur manual agar muat 3 sejajar di layar besar
-      className="group flex flex-col items-center text-center cursor-default w-full sm:w-[45%] lg:w-[28%] max-w-[280px]"
-    >
-      {/* KUNCI 1: Tambahan shrink-0 di ujung kanan agar lingkaran tidak ikut gepeng saat layar mengecil */}
-      <div className="relative w-44 h-44 mb-5 overflow-hidden rounded-full border-4 border-[#F8F6F1] shadow-sm bg-[#EDE8DC] transition-transform duration-500 group-hover:-translate-y-2 shrink-0">
-        <img 
-          src={item.img} 
-          alt={item.nama} 
-          onError={(e) => { e.currentTarget.src = 'https://ui-avatars.com/api/?name=' + item.nama + '&background=1E3A1E&color=F8F6F1&size=256' }}
-          /* KUNCI 2: Ganti object-center menjadi object-top agar fokus ke muka/kepala */
-          className="w-full h-full object-cover object-top opacity-90 grayscale-0 hover:grayscale group-hover:opacity-100 transition-all duration-700" 
-        />
-      </div>
-      <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 600, color: "#1A2410", lineHeight: 1.3 }}>
-        {item.nama}
-      </h4>
-      <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "#B8960C", marginTop: "8px" }}>
-        {item.jabatan}
-      </p>
-    </div>
-  ))}
-</div>
+          <div className="flex flex-wrap justify-center gap-x-15 gap-y-20 mb-20">
+            {[
+              { nama: "Al-Ustadz Gus H. M. Saifur Rijal", jabatan: "Ketua Yayasan", img: "/about/saifur.png" },
+              { nama: "Al-Ustadz Gus H.M. Luqman Hambali", jabatan: "Wakil Ketua Yayasan", img: "/about/hambali.png" },
+              { nama: "Al-Ustadz Fathur Rahman", jabatan: "Bendahara", img: "/about/fathur.png" },
+              { nama: "Al-Ustadzah Miftahul Hamidah", jabatan: "Bendahara", img: "/about/saisatul.png" },
+              { nama: "Al-Ustadzah Saisatul Munawwaroh", jabatan: "Bendahara", img: "/about/miftah.png"},
+              
+            ].map((item, idx) => (
+              <div 
+                key={idx} 
+                // Lebar kolom diatur manual agar muat 3 sejajar di layar besar
+                className="group flex flex-col items-center text-center cursor-default w-full sm:w-[45%] lg:w-[28%] max-w-[280px]"
+              >
+                {/* KUNCI 1: Tambahan shrink-0 di ujung kanan agar lingkaran tidak ikut gepeng saat layar mengecil */}
+                <div className="relative w-44 h-44 mb-5 overflow-hidden rounded-full border-4 border-[#F8F6F1] shadow-sm bg-[#EDE8DC] transition-transform duration-500 group-hover:-translate-y-2 shrink-0">
+                  <img 
+                    src={item.img} 
+                    alt={item.nama} 
+                    onError={(e) => { e.currentTarget.src = 'https://ui-avatars.com/api/?name=' + item.nama + '&background=1E3A1E&color=F8F6F1&size=256' }}
+                    /* KUNCI 2: Ganti object-center menjadi object-top agar fokus ke muka/kepala */
+                    className="w-full h-full object-cover object-top opacity-90 grayscale-0 hover:grayscale group-hover:opacity-100 transition-all duration-700" 
+                  />
+                </div>
+                <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 600, color: "#1A2410", lineHeight: 1.3 }}>
+                  {item.nama}
+                </h4>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", color: "#B8960C", marginTop: "8px" }}>
+                  {item.jabatan}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
