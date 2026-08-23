@@ -70,7 +70,7 @@ export default function DetailProgramPage() {
           <div className="w-full lg:w-1/2 mt-30 lg:mt-30">
             <img 
               // Ganti URL ini dengan foto asli santri MA pondokmu
-              src="/program/safari2tah.png" 
+              src="/program/MII.png" 
               alt="Kegiatan Santri Madrasah Ibtidaiyah" 
               className="w-full h-auto rounded-3xl shadow-lg object-cover"
               style={{ maxHeight: "600px" }}

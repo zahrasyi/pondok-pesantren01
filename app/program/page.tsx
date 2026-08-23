@@ -11,7 +11,7 @@ const programs = [
     id: "MI",
     title: "Madrasah Ibtidaiyah (MI)",
     desc: " ",
-    img: "/program/safari.png",
+    img: "/program/MI.jpg",
     href: "/program/mi", // <-- Ubah menjadi /program/mi (huruf kecil, nama foldernya)
   },
   {

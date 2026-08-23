@@ -3,8 +3,16 @@ import "./globals.css";
 import ScrollProvider from "@/components/ScrollProvider"; // Memanggil provider animasi kita
 
 export const metadata: Metadata = {
-  title: "Ma'had Al-Noor", // Judul bawaanmu
-  description: "Company Profile", // Deskripsi bawaanmu
+  title: "Pondok Pesantren Daarul Huda",
+  description: "Mencetak generasi Qur'ani yang berakhlak mulia, mandiri, dan berwawasan global. Pendaftaran santri baru telah dibuka.",
+  openGraph: {
+    title: "Pondok Pesantren Daarul Huda",
+    description: "Mencetak generasi Qur'ani yang berakhlak mulia, mandiri, dan berwawasan global.",
+    url: "https://daarulhuda.com", // Nanti bisa diganti dengan domain asli
+    siteName: "Ponpes Daarul Huda",
+    locale: "id_ID",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

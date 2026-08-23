@@ -14,7 +14,7 @@ export function Footer() {
     { Icon: FaFacebookF, url: "https://www.facebook.com/daarulhudamalang/" }, // Ganti dengan link asli
     { Icon: FaInstagram, url: "https://www.instagram.com/pondok.daarulhuda/" },
     { Icon: FaEnvelope, url: "mailto:pondokdaarulhuda@gmail.com" },       // mailto untuk email
-    { Icon: FaYoutube, url: "https://youtube.com/c/daarulhuda" },
+    { Icon: FaYoutube, url: "https://www.youtube.com/@daarulhudachannel1487" },
     { Icon: FaTiktok, url:"https://www.tiktok.com/@daarulhudachannel"},
   ];
 
