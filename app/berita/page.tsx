@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import { client } from "@/sanity/lib/client";
 
-const categories = ["Semua", "Akademik", "Penelitian", "Penerimaan", "Kampus", "Prestasi"];
+const categories = ["Semua", "Akademik", "Aktivitas", "Penerimaan", "Kampus", "Prestasi"];
 
 export default function BeritaPage() {
   const [activeCategory, setActiveCategory] = useState("Semua");

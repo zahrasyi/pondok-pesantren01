@@ -18,7 +18,7 @@ export default {
             { title: 'Akademik', value: 'Akademik' },
             { title: 'Penerimaan', value: 'Penerimaan' },
             { title: 'Kampus', value: 'Kampus' },
-            { title: 'Penelitian', value: 'Penelitian' },
+            { title: 'Aktivitas', value: 'Aktivitas' },
           ],
         },
       },
