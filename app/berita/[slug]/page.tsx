@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import Image from 'next/image';
 
 // Fungsi untuk mengambil data 1 berita spesifik berdasarkan slug (URL)
 async function getDetailBerita(slug: string) {

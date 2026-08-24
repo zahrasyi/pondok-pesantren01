@@ -9,6 +9,7 @@ import { Partners } from "@/components/Partner"; // Import komponen baru
 import { Admissions } from "@/components/Admissions";
 import { Footer } from "@/components/Footer";
 import { FounderQuote } from "@/components/FounderQuote";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <CampusLife /> */}
       <Admissions />
       <Footer />
+      <SpeedInsights />
     </main>
   );
 }

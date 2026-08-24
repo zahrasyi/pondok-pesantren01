@@ -1,5 +1,5 @@
 "use client";
-
+import Image from 'next/image';
 import { BookOpen, BriefcaseBusinessIcon } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
