@@ -13,7 +13,7 @@ import { client } from "@/sanity/lib/client";
 const kegiatanPondok = [
   { title: "Wisuda Tahfidz & Purna Siswa", desc: "Momen paling sakral dan membanggakan. Perayaan bagi para santri yang telah menyelesaikan amanah besar sebagai Hamilul Qur'an.", img: "/hero/wisudatahfidz.png" },
   { title: "Amaliyah Tadris (Praktek Mengajar)", desc: "Menyiapkan kader pemimpin umat. Santri kelas akhir diuji kemampuannya untuk terjun langsung menjadi pendidik yang profesional.", img: "/program/amaliyahtad.png" },
-  { title: "Safari Khotmil Qur'an", desc: "Berdakwah dan membumikan Al-Qur'an. Rombongan santri Daarul Huda turun langsung ke tengah masyarakat di berbagai daerah.", img: "/program/safaritah.png" },
+  { title: "Safari Khotmil Qur'an", desc: "Berdakwah dan membumikan Al-Qur'an. Rombongan santri Daarul Huda turun langsung ke tengah masyarakat di berbagai daerah.", img: "/program/Safaritah.png" },
   { title: "Haul Akbar", desc: "Merawat ingatan, menyambung sanad. Sebuah perhelatan besar yang dihadiri ribuan jamaah, santri, dan alumni.", img: "/kegiatan/haul.png" },
   { title: "Perkemahan (Khutbatul Arsy / Pramuka)", desc: "Membangun mental pejuang di alam terbuka. Ajang pendidikan karakter yang melatih kemandirian dan kerja sama tim.", img: "/kegiatan/kemah2.png" },
   { title: "Rihlah (Perjalanan Edukatif)", desc: "Tadabbur alam dan penyegaran pikiran. Agenda perjalanan edukatif di luar lingkungan pesantren untuk memperluas wawasan.", img: "/kegiatan/rihlah.png" }

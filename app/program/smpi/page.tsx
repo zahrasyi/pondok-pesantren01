@@ -71,7 +71,7 @@ export default function DetailProgramPage() {
           <div className="w-full lg:w-1/2 mt-25 lg:mt-20">
             <img 
               // Ganti URL ini dengan foto asli santri MA pondokmu
-              src="/program/safaritah.png" 
+              src="/program/Safaritah.png" 
               alt="Kegiatan Santri SMPI" 
               className="w-full h-auto rounded-3xl shadow-lg object-cover"
               style={{ maxHeight: "600px" }}
