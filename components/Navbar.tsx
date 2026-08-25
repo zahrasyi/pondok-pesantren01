@@ -55,7 +55,7 @@ export function Navbar() {
                 PONDOK PESANTREN DAARUL HUDA
               </div>
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "11px", fontWeight: 600, color: "#1A2410", letterSpacing: "0.01em" }}>
-                LI TAHFIDZIL QUR'AN
+                LITAHFIDHIL QUR'AN
               </div>
           </div>
         </Link>

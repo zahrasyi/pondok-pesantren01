@@ -40,14 +40,14 @@ export function Footer() {
                 PONDOK PESANTREN DAARUL HUDA
               </div>
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "11px", fontWeight: 600, color: "#1A2410", letterSpacing: "0.01em" }}>
-                LI TAHFIDZIL QUR'AN
+                LITAHFIDHIL QUR'AN
               </div>
             </div>
           </div>
 
           <div className="flex flex-col gap-2 mt-2">
             <p style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 700, color: "#1A2410" }}>
-            Jl. Murcoyo III, RT 20 / RW 06, Krajan, Gondanglegi Wetan, Kecamatan Gondanglegi, Kabupaten Malang, Jawa Timur 65174. (Kampus 1)
+            Jl. Murcoyo III, RT 20 / RW 06, Krajan, Gondanglegi Wetan, Kecamatan Gondanglegi, Kabupaten Malang, Jawa Timur 65174. (Kampus Pusat)
             </p>
             <p style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 700, color: "#1A2410" }}>
             Jl. Raya Gondanglegi-Dampit No. 37, Dusun Krajan, Desa Sepanjang, Kecamatan Gondanglegi, Kabupaten Malang, Jawa Timur 65174. (Kampus 2)
