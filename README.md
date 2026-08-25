@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pondok Pesantren Daarul Huda - Website Resmi
 
-## Getting Started
+Website profil resmi untuk Pondok Pesantren Daarul Huda Li Tahfidzil Qur'an. Proyek ini dibangun menggunakan arsitektur modern (Jamstack) untuk memastikan performa yang cepat, aman, dan mudah dikelola.
 
-First, run the development server:
+## 🚀 Teknologi yang Digunakan
 
-```bash
+*   **Framework Frontend:** [Next.js](https://nextjs.org/) (React)
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+*   **Headless CMS:** [Sanity.io](https://www.sanity.io/)
+*   **Deployment:** [Vercel](https://vercel.com/)
+*   **Bahasa Pemrograman:** TypeScript
+
+## ✨ Fitur Utama
+
+*   **Desain Responsif:** Tampilan yang optimal di perangkat *mobile*, tablet, maupun *desktop*.
+*   **Manajemen Konten Dinamis:** Pengurus pesantren dapat memperbarui berita, pengumuman, dan galeri dengan mudah melalui *dashboard* Sanity Studio tanpa perlu menyentuh kode.
+*   **Optimasi Performa:** Menggunakan komponen gambar bawaan Next.js dan *server-side rendering* untuk kecepatan *loading* maksimal.
+
+## 🛠️ Cara Menjalankan di Komputer Lokal (Development)
+
+Untuk menjalankan proyek ini di komputermu sendiri, ikuti langkah-langkah berikut:
+
+### 1. Persiapan
+Pastikan komputermu sudah terinstal [Node.js](https://nodejs.org/) dan Git.
+
+### 2. Kloning Repository
+Buka terminal dan jalankan perintah:
+\`\`\`bash
+git clone https://github.com/USERNAME-GITHUB/NAMA-REPOSITORY.git
+cd NAMA-REPOSITORY
+\`\`\`
+*(Catatan: Ganti URL di atas dengan link repository GitHub milikmu).*
+
+### 3. Instalasi Dependencies
+Jalankan perintah ini untuk mengunduh semua paket yang dibutuhkan:
+\`\`\`bash
+npm install
+\`\`\`
+
+### 4. Pengaturan Environment Variables
+Buat sebuah file baru bernama `.env.local` di folder utama proyek (sejajar dengan file `package.json`). Masukkan kunci rahasia Sanity di bawah ini:
+\`\`\`env
+NEXT_PUBLIC_SANITY_PROJECT_ID="isi_dengan_project_id_sanity_anda"
+NEXT_PUBLIC_SANITY_DATASET="production"
+\`\`\`
+*(Catatan: Hubungi pengembang untuk mendapatkan akses ID Sanity).*
+
+### 5. Menjalankan Server Frontend (Website)
+Jalankan perintah:
+\`\`\`bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
+Buka [http://localhost:3000](http://localhost:3000) di browsermu untuk melihat hasilnya.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 6. Menjalankan Sanity Studio (Dashboard Admin)
+Untuk mengelola konten, jalankan perintah ini di tab terminal baru:
+\`\`\`bash
+npm run sanity dev
+\`\`\`
+*(Atau sesuaikan dengan script yang ada di package.json milikmu untuk menjalankan Sanity lokal).*
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Panduan Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Proyek ini telah dikonfigurasi untuk di-*deploy* dengan mulus ke **Vercel**. 
+Setiap kali ada perubahan kode yang di-*push* ke *branch* `main` di GitHub, Vercel akan otomatis memperbarui situs yang *live*.
 
-## Learn More
+**Penting saat Deployment:** Pastikan untuk menambahkan `NEXT_PUBLIC_SANITY_PROJECT_ID` dan `NEXT_PUBLIC_SANITY_DATASET` pada menu *Environment Variables* di pengaturan proyek Vercel Anda. Serta pastikan domain Vercel/domain kustom telah didaftarkan pada menu **CORS Origins** di *dashboard* Sanity.
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 Lisensi
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Hak Cipta © 2026 Pondok Pesantren Daarul Huda.
