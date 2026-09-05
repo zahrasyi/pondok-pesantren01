@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pondok Pesantren Daarul Huda - Fullstack CMS Website 🚀
 
-## Getting Started
+> A development project for an integrated company profile website and Content Management System (CMS) for Pondok Pesantren Daarul Huda Li Tahfidzil Qur'an.
 
-First, run the development server:
+## 📖 About the Project
+This project was developed to digitize the information and publication system of the Islamic boarding school (*pesantren*). The main focus of this development is to create a high-performance (fast-loading) website with a responsive interface, and to provide a dedicated dashboard that allows clients to manage news content independently without requiring a technical background.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 💻 Role & Responsibilities
+In this freelance project, I took full responsibility for the entire End-to-End development lifecycle, including:
+*   Translating client requirements into a Jamstack-based application architecture.
+*   Building a responsive, interactive, and modern frontend.
+*   Designing the database schema and integrating a Headless CMS.
+*   Configuring deployment, optimizing performance, and integrating a custom domain.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
+*   **Framework:** Next.js (React)
+*   **Language:** TypeScript
+*   **Styling:** Tailwind CSS
+*   **Headless CMS:** Sanity.io
+*   **Deployment:** Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Key Features
+*   **Dynamic Content Management:** Clients can manage data structures (News, Gallery, Leadership) in real-time through Sanity Studio.
+*   **Dynamic Routing:** Implementation of dynamic news page generation using a slug system.
+*   **Advanced Image Optimization:** Utilizing Next.js built-in components for automatic WebP format compression and lazy loading, ensuring the page does not lag even when loading multiple high-quality photo assets.
+*   **Secure API Fetching:** Strict CORS origin configurations between the Vercel frontend and the Sanity backend.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💡 Technical Challenges & Solutions
+During the development of this project, several technical solutions were successfully implemented:
+1.  **Overcoming Performance Bottlenecks:** Resolved stuttering scroll animations and slow loading times by refactoring large DOM elements and switching from standard `<img>` tags to more memory-efficient handling via Next.js `<Image>`.
+2.  **Production Environment Integration:** Resolved connection blocking issues during the transition from localhost to the production server through Environment Variables configuration and API network permissions (CORS).
 
-## Learn More
+## 🔗 Live Demo
+🌐 [Visit Official Website](https://ponpesdaarulhuda.vercel.app) 
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
