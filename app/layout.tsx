@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pondok Pesantren Daarul Huda",
     description: "Mencetak generasi Qur'ani yang berakhlak mulia, mandiri, dan berwawasan global.",
-    url: "https://daarulhuda.com", // Nanti bisa diganti dengan domain asli
+    url: "https://ponpesdaarulhuda.vercel.app",
     siteName: "Ponpes Daarul Huda",
     locale: "id_ID",
     type: "website",
