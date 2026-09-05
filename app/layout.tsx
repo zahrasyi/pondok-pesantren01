@@ -5,6 +5,9 @@ import ScrollProvider from "@/components/ScrollProvider"; // Memanggil provider 
 export const metadata: Metadata = {
   title: "Pondok Pesantren Daarul Huda",
   description: "Mencetak generasi Qur'ani yang berakhlak mulia, mandiri, dan berwawasan global. Pendaftaran santri baru telah dibuka.",
+  verification: {
+    google: '60muhjdxWKMlyEPxGwRjC2ByMKBKvgk1kpWeJDpneW',
+  },
   openGraph: {
     title: "Pondok Pesantren Daarul Huda",
     description: "Mencetak generasi Qur'ani yang berakhlak mulia, mandiri, dan berwawasan global.",
