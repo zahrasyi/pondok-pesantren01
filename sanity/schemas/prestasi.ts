@@ -1,25 +1,64 @@
 export default {
-    name: 'prestasi',
-    title: 'Prestasi Santriwati',
-    type: 'document',
-    fields: [
-      {
-        name: 'title',
-        title: 'Judul Prestasi',
-        type: 'string',
-        validation: (Rule: any) => Rule.required(),
+  name: 'prestasi',
+  title: 'Prestasi Santriwati',
+  type: 'document',
+  fields: [
+    {
+      name: 'title',
+      title: 'Judul Berita',
+      type: 'string',
+      validation: (Rule: any) => Rule.required(),
+    },
+    // {
+    //   name: 'category',
+    //   title: 'Kategori',
+    //   type: 'string',
+    //   options: {
+    //     list: [
+    //       { title: 'Akademik', value: 'Akademik' },
+    //       { title: 'Penerimaan', value: 'Penerimaan' },
+    //       { title: 'Kampus', value: 'Kampus' },
+    //       { title: 'Aktivitas', value: 'Aktivitas' },
+    //     ],
+    //   },
+    // },
+    {
+      name: 'date',
+      title: 'Tanggal Publikasi',
+      type: 'date',
+      options: { dateFormat: 'DD MMMM YYYY' },
+    },
+    {
+      name: 'img',
+      title: 'Gambar Utama',
+      type: 'image',
+      options: { hotspot: true }, // Memungkinkan klien mengatur fokus gambar
+    },
+    {
+      name: 'excerpt',
+      title: 'Kutipan Singkat (Excerpt)',
+      type: 'text',
+      description: 'Muncul di kartu berita depan (Maks. 200 karakter)',
+    },
+    
+    {
+      name: 'slug',
+      title: 'Slug (URL)',
+      type: 'slug',
+      options: {
+        source: 'title', // Otomatis membuat URL dari judul
+        maxLength: 96,
       },
-      {
-        name: 'year',
-        title: 'Tahun (Contoh: 2025)',
-        type: 'string',
-        validation: (Rule: any) => Rule.required(),
-      },
-      {
-        name: 'desc',
-        title: 'Deskripsi Singkat',
-        type: 'text',
-        validation: (Rule: any) => Rule.required().max(150),
-      },
-    ],
-  };
+    },
+    {
+      name: 'content',
+      title: 'Isi Berita Lengkap',
+      type: 'array',
+      of: [
+        { type: 'block' }, // Untuk teks paragraf biasa
+        { type: 'image', options: { hotspot: true } } // Memungkinkan admin menyisipkan gambar di tengah teks
+      ],
+    },
+   
+  ],
+};
