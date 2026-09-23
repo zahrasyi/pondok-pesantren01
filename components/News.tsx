@@ -1,63 +1,129 @@
+"use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { client } from "@/sanity/lib/client";
 
-const news = [
-  { category: "Akademik", date: "5 Juni 2026", title: "Musabaqah Hifzil Qur'an Tahunan Diikuti 400 Peserta dari Seluruh Nusantara", excerpt: "Kompetisi Tilawatil Qur'an Nasional 2026 yang diselenggarakan Ma'had Daarul Huda menyambut santri dari 28 provinsi.", img: "/news/kemah.png" },
-  { category: "Penelitian", date: "28 Mei 2026", title: "Makalah Dosen tentang Bioetika Islam Diterbitkan di Jurnal Internasional", excerpt: "Penelitian Dr. Fatimah Zahra yang inovatif mendapat pengakuan dari Oxford Journal of Islamic Studies.", img: "/news/kemahh.png" },
-  { category: "Penerimaan", date: "20 Mei 2026", title: "Penerimaan 2026: Pendaftaran Dibuka untuk Semua Program Sarjana", excerpt: "Calon santri dapat mengajukan pendaftaran melalui portal daring. Batas waktu: 15 Agustus.", img: "/news/rihlah.png" },
-  { category: "Kampus", date: "12 Mei 2026", title: "Sayap Perpustakaan Baru & Pusat Sumber Digital Resmi Dibuka", excerpt: "Perpustakaan Digital Baitul Hikmah menyediakan akses ke lebih dari 120.000 teks Islam klasik dan kontemporer.", img: "/news/ujian lisan.png" },
-  { category: "Kampus", date: "12 Mei 2026", title: "Sayap Perpustakaan Baru & Pusat Sumber Digital Resmi Dibuka", excerpt: "Perpustakaan Digital Baitul Hikmah menyediakan akses ke lebih dari 120.000 teks Islam klasik dan kontemporer.", img: "/news/upacara.png" },
-  { category: "Kampus", date: "12 Mei 2026", title: "Sayap Perpustakaan Baru & Pusat Sumber Digital Resmi Dibuka", excerpt: "Perpustakaan Digital Baitul Hikmah menyediakan akses ke lebih dari 120.000 teks Islam klasik dan kontemporer.", img: "/news/wisudatah.png" },
-];
+export const News = () => {
+  const [beritaData, setBeritaData] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-export function News() {
+  useEffect(() => {
+    const fetchBerita = async () => {
+      try {
+        const query = `*[_type == "berita"] | order(date desc)[0...3] {
+          _id,
+          title,
+          slug,
+          category,
+          date,
+          "imageUrl": img.asset->url
+        }`;
+        const data = await client.fetch(query);
+        setBeritaData(data);
+      } catch (error) {
+        console.error("Gagal mengambil data berita beranda:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBerita();
+  }, []);
+
   return (
-    <section id="news" className="bg-[#F8F6F1] py-32 px-8 overflow-hidden">
+    <section className="bg-[#F8F6F1] py-24 px-8">
       <div className="max-w-7xl mx-auto">
         
-        <div data-aos="fade-right" className="mb-14">
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 3.5vw, 46px)", fontWeight: 500, color: "#1A2410", lineHeight: 1.2 }}>
-            Berita & <em>Pengumuman</em>
+        {/* Judul Bagian & Tombol (Sesuai Style Navbar) */}
+        <div className="flex justify-between items-end mb-14">
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "42px", color: "#1A2410" }}>
+            Berita & Pengumuman
           </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {news.map((item, i) => (
-            <Link key={i} href="#" data-aos="fade-up" data-aos-delay={i * 100} className="relative block h-[380px] overflow-hidden group bg-[#1A2410]">
-              <img src={item.img} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A2410] via-[#1A2410]/50 to-transparent transition-opacity duration-500 opacity-90 group-hover:opacity-100" />
-              
-              <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "9px", fontWeight: 500, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1A2410", background: "#B8960C", padding: "4px 10px", width: "fit-content", marginBottom: "12px" }}>
-                  {item.category}
-                </span>
-                <div className="mb-2" style={{ fontFamily: "'Inter', sans-serif", fontSize: "11px", color: "rgba(248,246,241,0.7)", letterSpacing: "0.05em" }}>
-                  {item.date}
-                </div>
-                <h3 className="mb-3 transition-colors duration-300 group-hover:text-[#B8960C]" style={{ fontFamily: "'Playfair Display', serif", fontSize: "22px", fontWeight: 500, color: "#F8F6F1", lineHeight: 1.35 }}>
-                  {item.title}
-                </h3>
-                <div className="overflow-hidden transition-all duration-500 max-h-0 opacity-0 group-hover:max-h-[100px] group-hover:opacity-100 mt-2">
-                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", fontWeight: 300, color: "rgba(248,246,241,0.8)", lineHeight: 1.6 }}>
-                    {item.excerpt}
-                  </p>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        <div data-aos="fade-up" data-aos-delay="300" className="flex justify-center mt-14">
-          <Link
-            href="/berita"
-            className="flex items-center gap-2 group hover:opacity-70 transition-opacity"
-            style={{ fontFamily: "'Inter', sans-serif", fontSize: "12px", fontWeight: 500, letterSpacing: "0.12em", textTransform: "uppercase", color: "#1E3A1E", textDecoration: "none", borderBottom: "1px solid #1E3A1E", paddingBottom: "4px" }}
+          <Link 
+            href="/berita" 
+            className="hidden md:block pb-1 hover:opacity-70 transition-opacity" 
+            style={{ 
+              fontFamily: "'Inter', sans-serif", 
+              fontSize: "13px", 
+              fontWeight: 500,
+              letterSpacing: "0.1em", // Menyamakan jarak huruf dengan navbar
+              textTransform: "uppercase", // Huruf kapital seperti navbar
+              color: "#1A2410", 
+              textDecoration: "underline", 
+              textUnderlineOffset: "6px" 
+            }}
           >
-            Semua Berita <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+            Lihat Semua Berita &rarr;
+          </Link>
+        </div>
+
+        {/* Loading State */}
+        {loading ? (
+          <div className="text-center py-20" style={{ fontFamily: "'Inter', sans-serif", color: "#6B7355" }}>
+            Memuat berita...
+          </div>
+        ) : (
+          /* Grid 3 Kolom untuk Berita (Model Tumpuk/Overlay) */
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {beritaData.map((item) => (
+              <Link 
+                key={item._id} 
+                href={`/berita/${item.slug?.current || ''}`}
+                className="group cursor-pointer block relative overflow-hidden h-[400px]"
+              >
+                {/* Gambar Background */}
+                <img 
+                  src={item.imageUrl} 
+                  alt={item.title} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" 
+                />
+                
+                {/* Gradien Gelap Penutup Gambar agar teks putih terbaca */}
+                <div 
+                  className="absolute inset-0" 
+                  style={{ background: "linear-gradient(to top, rgba(26,36,16,0.9) 0%, rgba(26,36,16,0.3) 50%, transparent 80%)" }} 
+                />
+                
+                {/* Konten Teks di Atas Gambar */}
+                <div className="absolute bottom-0 left-0 p-8 w-full">
+                  <span 
+                    className="inline-block mb-4"
+                    style={{ fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 500, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1A2410", background: "#B8960C", padding: "4px 12px" }}
+                  >
+                    {item.category}
+                  </span>
+                  <div className="mb-2" style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", color: "#E5E7EB" }}>
+                    {item.date}
+                  </div>
+                  <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "20px", fontWeight: 500, color: "#FFFFFF", lineHeight: 1.4 }}>
+                    {item.title}
+                  </h4>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+
+        {/* Tombol Lihat Semua (Untuk versi Mobile) */}
+        <div className="mt-12 text-center md:hidden">
+          <Link 
+            href="/berita" 
+            style={{ 
+              fontFamily: "'Inter', sans-serif", 
+              fontSize: "13px", 
+              fontWeight: 500,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "#1A2410", 
+              textDecoration: "underline", 
+              textUnderlineOffset: "6px" 
+            }}
+          >
+            Lihat Semua Berita &rarr;
           </Link>
         </div>
 
       </div>
     </section>
   );
-}
+};
