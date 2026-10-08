@@ -27,7 +27,7 @@ const programMenu = [
 const navItems = [
   { label: "Tentang", href: "/tentang" },
   { label: "Jenjang", href: "/program" },
-  { label: "Kegiatan", href: "/kehidupan-kampus" },
+  { label: "Kegiatan", href: "/kegiatan" },
   { label: "Berita", href: "/berita" },
   { label: "Penerimaan", href: "/penerimaan" },
 ];
