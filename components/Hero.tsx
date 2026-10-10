@@ -99,7 +99,7 @@ export function Hero() {
           }`}
           style={{ fontFamily: "'Inter', sans-serif", fontSize: "20px", fontWeight: 300, color: "rgba(248,246,241,0.75)", lineHeight: 1.75 }}
         >
-          Pondok Pesantren Daaral Huda Litahfidhil Qur'an, Sebuah lembaga pendidikan Islam yang tidak hanya membina ilmu, namun juga menanamkan cinta sejati kepada Kalamullah, Al-Qur'anal Karim.
+          Pondok Pesantren Daaral Huda Litahfidhil Qur'an, Sebuah lembaga pendidikan Islam yang tidak hanya membina ilmu, namun juga menanamkan cinta sejati kepada Kalamullah, Al-Qur'anul Karim.
         </p>
 
         {/* CTAs - Animasi urutan 5 */}

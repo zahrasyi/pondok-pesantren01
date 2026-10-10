@@ -125,11 +125,11 @@ export function Navbar() {
                       <div>
                         <div className="flex items-center gap-2 mb-1">
                           <span style={{ fontFamily: "'Inter', 'playfair-display'", fontSize: "14px", fontWeight: 600, color: "#1A2410" }}>{item.title}</span>
-                          {item.badge && (
+                          {/* {item.badge && (
                             <span className="bg-[#B8960C] text-white px-2 py-0.5 rounded text-[10px] font-semibold tracking-wider uppercase">
                               {item.badge}
                             </span>
-                          )}
+                          )} */}
                         </div>
                         <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "12px", color: "#6B7355", lineHeight: 1.5, margin: 0 }}>{item.desc}</p>
                       </div>

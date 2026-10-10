@@ -158,9 +158,9 @@ export default function KehidupanPondokPage() {
               {prestasiData.map((p, idx) => (
                 <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-[rgba(30,58,30,0.06)] flex flex-col justify-between">
                   <div>
-                    <span className="inline-block bg-[#B8960C]/10 text-[#B8960C] px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    {/* <span className="inline-block bg-[#B8960C]/10 text-[#B8960C] px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ fontFamily: "'Inter', sans-serif" }}>
                       {p.year}
-                    </span>
+                    </span> */}
                     <h3 className="mb-3" style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", fontWeight: 600, color: "#1A2410", lineHeight: 1.35 }}>
                       {p.title}
                     </h3>
