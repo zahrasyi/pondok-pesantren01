@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Ganti dengan domain aslimu nanti jika sudah dibeli
-  const baseUrl = 'https://ponpesdaarulhuda.com' 
+  const baseUrl = 'https://www.ponpesdaarulhuda.com' 
 
   return [
     {
